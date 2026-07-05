@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — Alaa Lab</title>
+  <meta name="description" content="Research publications from the Alaa Lab at UC Berkeley and UCSF." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .page-header { padding: 16px 0 24px; margin-bottom: 36px; }
+    .pub-pagination {
+      display: flex; align-items: center; justify-content: center;
+      gap: 6px; margin: 32px 0 8px;
+    }
+    .pub-pagination[hidden] { display: none; }
+    .pub-pagination button {
+      min-width: 36px; height: 36px; padding: 0 10px;
+      background: none; border: 1px solid var(--border); border-radius: 6px;
+      cursor: pointer; font-size: 0.875rem; font-family: inherit; color: var(--text);
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+    .pub-pagination button:hover:not(:disabled) {
+      background: var(--surface); border-color: var(--accent); color: var(--accent);
+    }
+    .pub-pagination button:disabled { opacity: 0.3; cursor: default; }
+    .pub-pagination button.pag-active {
+      background: var(--accent); border-color: var(--accent); color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-logo" href="../index.html">Alaa Lab at UC Berkeley and UCSF</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="people.html">People</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="people.html">Lab Members</a></li>
+            <li><a href="joining.html">Joining Us</a></li>
+          </ul>
+        </li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="https://github.com/AlaaLab" target="_blank">Software</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header" style="display:flex; align-items:center; gap:40px;">
+        <img src="../assets/images/logo_publications.jpg" alt="Alaa Lab Publications" style="height:110px; width:auto; flex-shrink:0;" />
+        <div>
+          <h1 style="font-family:'Lora',Georgia,serif; font-weight:400; letter-spacing:-0.01em;">Publications</h1>
+          <p>Peer-reviewed papers, preprints, and workshop contributions.</p>
+        </div>
+      </div>
+
+      <!-- ── Single-row filter ─────────────────────── -->
+      <div class="pub-filters" style="margin-bottom:20px;">
+
+        <div class="filter-row">
+          <span class="filter-label">Show</span>
+          <div class="filter-group">
+            <button class="filter-btn pub-primary-btn active" data-filter="all">All</button>
+            <button class="filter-btn pub-primary-btn" data-filter="top-conf">NeurIPS, ICML &amp; ICLR</button>
+            <select class="filter-select" id="year-select">
+              <option value="all">Year</option>
+              <option value="2026">2026</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+            </select>
+            <span class="filter-label" style="padding-top:7px; margin-left:16px;">Lab Member</span>
+            <select class="filter-select" id="student-select">
+              <option value="all">All members</option>
+              <option value="schubert">Alex Schubert</option>
+              <option value="kaur">Jivat Kaur</option>
+              <option value="mehandru">Nikita Mehandru</option>
+              <option value="hou">Kaihua Hou</option>
+              <option value="liang">Zhongyuan Liang</option>
+              <option value="dean">Frances Dean</option>
+              <option value="fields">Jenna Fields</option>
+              <option value="golchini">Niloufar Golchini</option>
+              <option value="mudunuri">Abhijith Mudunuri</option>
+            </select>
+          </div>
+          <div class="pub-search-row">
+            <input type="text" class="pub-search-input" id="pub-search" placeholder="Search by author, title, venue…" autocomplete="off" />
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pub-list" id="pub-list">
+
+        <!-- ── 2026 ─────────────────────────────────── -->
+
+        <div class="pub-item" data-filter-val="2026" data-venue-type="top-conf">
+          <div>
+            <div class="pub-title">Position: Deciphering the Functions of DNAs, RNAs, and Proteins Should Consider Multi-Modal Large Language Models</div>
+            <div class="pub-authors">Pengtao Xie, Victor Nizet, Lei Wang, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Daniel C. Zielinski, Trey Ideker, Bernhard Palsson</div>
+            <div class="pub-venue">ICML 2026 · Spotlight</div>
+            <div class="pub-links">
+              <a href="https://icml.cc/virtual/2026/poster/67235" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026" data-venue-type="top-conf" data-students="hou">
+          <div>
+            <div class="pub-title">ReasonEdit: Editing Vision-Language Models using Human Reasoning</div>
+            <div class="pub-authors">Jiaxing Qiu, <a href="people/hou.html" class="member-link"><strong>Kaihua Hou</strong></a>, Roxana Daneshjou, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Thomas Hartvigsen</div>
+            <div class="pub-venue">ICML · 2026</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2602.02408" target="_blank">Paper</a>
+              <a href="https://github.com/JiaxingQiu/reasonedit" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026" data-students="mehandru golchini">
+          <div>
+            <div class="pub-title">ER-Reason: A Benchmark Dataset for LLM Clinical Reasoning in the Emergency Room</div>
+            <div class="pub-authors"><a href="people/mehandru.html" class="member-link"><strong>Nikita Mehandru</strong></a>, <a href="people/golchini.html" class="member-link"><strong>Niloufar Golchini</strong></a>, Namrata Garg, Kathy LeSaint, Christopher Nash, Anu Ramachandran, Travis Zack, Liam McCoy, Adam Rodman, David Bamman, Melanie Molina†, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>† <span style="font-size:0.78em; color:var(--muted);">(†Co-senior authors)</span></div>
+            <div class="pub-venue">arXiv preprint · 2026</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2505.22919" target="_blank">Paper</a>
+              <a href="https://github.com/AlaaLab/ER-Reason" target="_blank">Code</a>
+              <a href="https://physionet.org/content/er-reason/1.0.0/" target="_blank">Data</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026">
+          <div>
+            <div class="pub-title">CheXthought: A Global Multimodal Dataset of Clinical Chain-of-thought Reasoning and Visual Attention for Chest X-ray Interpretation</div>
+            <div class="pub-authors">Sonali Sharma, Jin Long, George Shih, Sarah Eid, Christian Bluethgen, Francine L. Jacobson, Emily B. Tsai, <a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a>, Curtis P. Langlotz, Global Radiology Consortium</div>
+            <div class="pub-venue">arXiv preprint · 2026</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2604.26288" target="_blank">Paper</a>
+              <a href="https://huggingface.co/StanfordAIMI/CheXthought" target="_blank">Data</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026" data-students="hou mudunuri">
+          <div>
+            <div class="pub-title">Test-Time Hinting for Black-Box Vision-Language Models</div>
+            <div class="pub-authors"><a href="people/hou.html" class="member-link"><strong>Kaihua Hou</strong></a>, <a href="people/mudunuri.html" class="member-link"><strong>Abhijith Varma Mudunuri</strong></a>, Jiaxing Qiu, Roxana Daneshjou, Thomas Hartvigsen, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">arXiv preprint · 2026</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2605.16410" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026" data-students="dean fields">
+          <div>
+            <div class="pub-title">Causal Effect Estimation with Learned Instrument Representations</div>
+            <div class="pub-authors"><a href="people/dean.html" class="member-link"><strong>Frances Dean</strong></a>*, <a href="people/fields.html" class="member-link"><strong>Jenna Fields</strong></a>*, R. Bhalerao, Marie-Laure Charpignon, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a> <span style="font-size:0.78em; color:var(--muted);">(*Co-first authors)</span></div>
+            <div class="pub-venue">arXiv preprint · 2026</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2602.10370" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026" data-students="mehandru hou">
+          <div>
+            <div class="pub-title">State-Space Modeling in Natural Language</div>
+            <div class="pub-authors"><a href="people/mehandru.html" class="member-link"><strong>Nikita Mehandru</strong></a>, Marie-Laure Charpignon, <a href="people/hou.html" class="member-link"><strong>Kaihua Hou</strong></a>, David Bamman, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">ICLR Workshop on Time Series in the Age of Large Models · 2026</div>
+            <div class="pub-links">
+              <a href="https://openreview.net/forum?id=HY9c8l9kbS" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026" data-students="kaur">
+          <div>
+            <div class="pub-title">Strategic Feature Selection</div>
+            <div class="pub-authors"><a href="people/kaur.html" class="member-link"><strong>Jivat Kaur</strong></a>, Pratik Patil, Divya Shanmugam, Emma Pierson, Michael I. Jordan, Nika Haghtalab, Meena Jagadeesan†, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>†, Serena Wang† <span style="font-size:0.78em; color:var(--muted);">(†Co-senior authors)</span></div>
+            <div class="pub-venue">arXiv preprint · 2026</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2606.18867" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026">
+          <div>
+            <div class="pub-title">Aligning Language Model Benchmarks with Pairwise Preferences</div>
+            <div class="pub-authors">M. Gutierrez, X. Leng, H. Cyberey, J.R. Schwarz, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Thomas Hartvigsen</div>
+            <div class="pub-venue">arXiv preprint · 2026</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2602.02898" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026">
+          <div>
+            <div class="pub-title">Advances in LLM Reasoning Enable Flexibility in Clinical Problem-Solving</div>
+            <div class="pub-authors">K. Shidara, P. Prem, J. Kim, A. Podlasek, F. Liu, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, D. Bernardo</div>
+            <div class="pub-venue">arXiv preprint · 2026</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2601.11866" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026" data-students="dean">
+          <div>
+            <div class="pub-title">Artificial Intelligence Surrogate Models to Predict Long-Term Cardiovascular Effects of Immune Checkpoint Inhibitor Therapies Using Electrocardiograms</div>
+            <div class="pub-authors"><a href="people/dean.html" class="member-link"><strong>Frances Dean</strong></a>, J. Barrios, G. Tison, J.J. Moslehi, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">Journal of Clinical Oncology · 2026 · Abstract</div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026">
+          <div>
+            <div class="pub-title">MedEvalArena: A Self-Generated, Peer-Judged Benchmark for Medical Reasoning</div>
+            <div class="pub-authors">P. Prem, K. Shidara, V. Kuppa, E. Wheeler, F. Liu, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, D. Bernardo</div>
+            <div class="pub-venue">medRxiv · 2026</div>
+            <div class="pub-links">
+              <a href="https://www.medrxiv.org/content/10.64898/2026.01.27.26344905v1" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026">
+          <div>
+            <div class="pub-title">Machine Learning Cross-Platform Proteomic Imputation Enables Protein Quality Scoring and Replication of Epidemiological Associations</div>
+            <div class="pub-authors">Linke Li*, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>*, Y. Tan, Ilker Demirel, S. Friedman, Q. Zha, R.P. Trac, K.D. Taylor, et al. <span style="font-size:0.78em; color:var(--muted);">(*Co-first authors)</span></div>
+            <div class="pub-venue">bioRxiv · 2026</div>
+            <div class="pub-links">
+              <a href="https://www.biorxiv.org/content/10.64898/2026.05.05.723059v1" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2026" data-students="schubert">
+          <div>
+            <div class="pub-title">A Deep Learning Approach to Quantitative PCR that Learns from Ground Truth</div>
+            <div class="pub-authors">Ziad Obermeyer, H. Vu, <a href="people/schubert.html" class="member-link"><strong>Alexander Schubert</strong></a>, S. Selvan, P. Giannikopoulos, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">Preprint · 2026</div>
+            <div class="pub-links">
+              <a href="https://www.researchsquare.com/article/rs-8802696/v1" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 2025 ─────────────────────────────────── -->
+
+        <div class="pub-item" data-filter-val="2025" data-venue-type="top-conf" data-students="golchini dean">
+          <div>
+            <div class="pub-title">Position: Medical Large Language Model Benchmarks Should Prioritize Construct Validity</div>
+            <div class="pub-authors"><a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Thomas Hartvigsen, <a href="people/golchini.html" class="member-link"><strong>Niloufar Golchini</strong></a>, Shiladitya Dutta, <a href="people/dean.html" class="member-link"><strong>Frances Dean</strong></a>, Inioluwa Deborah Raji, Travis Zack</div>
+            <div class="pub-venue">ICML 2025 · Oral Presentation</div>
+            <div class="pub-links">
+              <a href="https://openreview.net/pdf?id=YuMEUNNpeb" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025" data-venue-type="top-conf">
+          <div>
+            <div class="pub-title">Generalized Venn and Venn-Abers Calibration with Applications in Conformal Prediction</div>
+            <div class="pub-authors">Lars van der Laan, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">ICML · 2025</div>
+            <div class="pub-links">
+              <a href="https://openreview.net/forum?id=kl2SA1N03E" target="_blank">Paper</a>
+              <a href="https://github.com/Larsvanderlaan/VennCalibration" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025">
+          <div>
+            <div class="pub-title">Model Editing with Graph-Based External Memory</div>
+            <div class="pub-authors">Y.K. Atri, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Thomas Hartvigsen</div>
+            <div class="pub-venue">ACL · 2025</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2505.18343" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025">
+          <div>
+            <div class="pub-title">Lifelong Model Editing with Graph-Based External Memory</div>
+            <div class="pub-authors">Y.K. Atri, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Thomas Hartvigsen</div>
+            <div class="pub-venue">ACL Findings · 2025</div>
+            <div class="pub-links">
+              <a href="https://aclanthology.org/2025.findings-acl.690/" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025">
+          <div>
+            <div class="pub-title">Generative AI Enables Medical Image Segmentation in Ultra Low-Data Regimes</div>
+            <div class="pub-authors">L. Zhang, B. Jindal, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, R. Weinreb, D. Wilson, E. Segal, J. Zou, Pengtao Xie</div>
+            <div class="pub-venue">Nature Communications · 2025</div>
+            <div class="pub-links">
+              <a href="https://www.nature.com/articles/s41467-025-61754-6" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025">
+          <div>
+            <div class="pub-title">A Longitudinal Analysis of Declining Medical Safety Messaging in Generative AI Models</div>
+            <div class="pub-authors">Sonali Sharma, <a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a>, Roxana Daneshjou</div>
+            <div class="pub-venue">npj Digital Medicine · 2025</div>
+            <div class="pub-links">
+              <a href="https://www.nature.com/articles/s41746-025-01943-1" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025">
+          <div>
+            <div class="pub-title">Limitations of Large Language Models in Clinical Problem-Solving Arising from Inflexible Reasoning</div>
+            <div class="pub-authors">J. Kim, A. Podlasek, K. Shidara, F. Liu, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, D. Bernardo</div>
+            <div class="pub-venue">Scientific Reports · 2025</div>
+            <div class="pub-links">
+              <a href="https://www.nature.com/articles/s41598-025-22940-0" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025" data-students="mehandru">
+          <div>
+            <div class="pub-title">BioAgents: Bridging the Gap in Bioinformatics Analysis with Multi-Agent Systems</div>
+            <div class="pub-authors"><a href="people/mehandru.html" class="member-link"><strong>Nikita Mehandru</strong></a>, A.K. Hall, O. Melnichenko, Y. Dubinina, D. Tsirulnikov, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, et al.</div>
+            <div class="pub-venue">Scientific Reports · 2025</div>
+            <div class="pub-links">
+              <a href="https://www.nature.com/articles/s41598-025-25919-z" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025" data-students="mehandru">
+          <div>
+            <div class="pub-title">Viability of Machine Translation for Healthcare in Low-Resourced Languages</div>
+            <div class="pub-authors">H.H. Nigatu, <a href="people/mehandru.html" class="member-link"><strong>Nikita Mehandru</strong></a>, N.H. Abadi, B. Gebremeskel, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, et al.</div>
+            <div class="pub-venue">EMNLP · 2025</div>
+            <div class="pub-links">
+              <a href="https://aclanthology.org/2025.emnlp-main.535/" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025" data-students="liang">
+          <div>
+            <div class="pub-title">Hybrid Meta-learners for Estimating Heterogeneous Treatment Effects</div>
+            <div class="pub-authors"><a href="people/liang.html" class="member-link"><strong>Zhongyuan Liang</strong></a>, Lars van der Laan, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">arXiv preprint · 2025</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2506.13680" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025" data-students="kaur">
+          <div>
+            <div class="pub-title">Conformal Prediction Sets with Improved Conditional Coverage using Trust Scores</div>
+            <div class="pub-authors"><a href="people/kaur.html" class="member-link"><strong>Jivat Kaur</strong></a>, Michael I. Jordan, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">arXiv preprint · 2025</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2501.10139" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025">
+          <div>
+            <div class="pub-title">Lifelong Knowledge Editing Requires Better Regularization</div>
+            <div class="pub-authors">A. Gupta, P. Prateepamornkul, M. Lu, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Thomas Hartvigsen, et al.</div>
+            <div class="pub-venue">arXiv preprint · 2025</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2502.01636" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025" data-students="schubert">
+          <div>
+            <div class="pub-title">Data Reuse Enables Cost-Efficient Randomized Trials of Medical AI Models</div>
+            <div class="pub-authors">M. Nercessian, W. Zhang, <a href="people/schubert.html" class="member-link"><strong>Alexander Schubert</strong></a>, D. Yang, M. Chung, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>†, Adam Yala† <span style="font-size:0.78em; color:var(--muted);">(†Co-senior authors)</span></div>
+            <div class="pub-venue">arXiv preprint · 2025</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2511.08986" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025">
+          <div>
+            <div class="pub-title">Reliable Agent Engineering Should Integrate Machine-Compatible Organizational Principles</div>
+            <div class="pub-authors">R.P. Xian, G.A. Gabison, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, C. Riedl, G.G. Chrysos</div>
+            <div class="pub-venue">arXiv preprint · 2025</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2512.07665" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025">
+          <div>
+            <div class="pub-title">Norm Growth and Stability Challenges in Localized Sequential Knowledge Editing</div>
+            <div class="pub-authors">A. Gupta, C. Fang, A. Ozdemir, M. Lu, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Thomas Hartvigsen, et al.</div>
+            <div class="pub-venue">AAAI Workshop on Knowledgeable Foundation Models · 2025</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2502.19416" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025" data-students="golchini mehandru">
+          <div>
+            <div class="pub-title">Physician-versus Large Language Model-Generated Summaries in the Emergency Department</div>
+            <div class="pub-authors"><a href="people/golchini.html" class="member-link"><strong>Niloufar Golchini</strong></a>, <a href="people/mehandru.html" class="member-link"><strong>Nikita Mehandru</strong></a>, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>†, Melanie Molina† <span style="font-size:0.78em; color:var(--muted);">(†Co-senior authors)</span></div>
+            <div class="pub-venue">medRxiv · 2025</div>
+            <div class="pub-links">
+              <a href="https://www.medrxiv.org/content/10.1101/2025.08.13.25333609v3" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2025">
+          <div>
+            <div class="pub-title">Extracting TNFi Switching Reasons and Trajectories From Real-World Data Using Large Language Models</div>
+            <div class="pub-authors">Brenda Y. Miao, M. Binvignat, A. Garcia-Agundez, M. Bravo, C.Y.K. Williams, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, et al.</div>
+            <div class="pub-venue">medRxiv · 2025</div>
+            <div class="pub-links">
+              <a href="https://www.medrxiv.org/content/10.1101/2025.04.14.25325834v1.full" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 2024 ─────────────────────────────────── -->
+
+        <div class="pub-item" data-filter-val="2024" data-venue-type="top-conf">
+          <div>
+            <div class="pub-title">Self-Calibrating Conformal Prediction</div>
+            <div class="pub-authors">Lars van der Laan, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">NeurIPS · 2024</div>
+            <div class="pub-links">
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/c1c49aba08e6c90f2b1f85751f497a2f-Paper-Conference.pdf" target="_blank">Paper</a>
+              <a href="https://github.com/Larsvanderlaan/SelfCalibratingConformal" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024" data-venue-type="top-conf" data-students="dean">
+          <div>
+            <div class="pub-title">Med-Real2Sim: Non-Invasive Medical Digital Twins using Physics-Informed Self-Supervised Learning</div>
+            <div class="pub-authors">Keying Kuang, <a href="people/dean.html" class="member-link"><strong>Frances Dean</strong></a>, Jack B. Jedlicki, David Ouyang, Anthony Philippakis†, David Sontag†, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>† <span style="font-size:0.78em; color:var(--muted);">(†Co-senior authors)</span></div>
+            <div class="pub-venue">NeurIPS · 2024</div>
+            <div class="pub-links">
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/0b081a44ed0b8c0c4aa6bd886a60bea4-Paper-Conference.pdf" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024" data-venue-type="top-conf">
+          <div>
+            <div class="pub-title">Prediction-Powered Generalization of Causal Inferences</div>
+            <div class="pub-authors">Ilker Demirel, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Anthony Philippakis, David Sontag</div>
+            <div class="pub-venue">ICML · 2024</div>
+            <div class="pub-links">
+              <a href="https://openreview.net/forum?id=QKnWXX3aVm" target="_blank">Paper</a>
+              <a href="https://github.com/demireal/ppci" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024" data-venue-type="top-conf">
+          <div>
+            <div class="pub-title">Mean-Field Chaos Diffusion Models</div>
+            <div class="pub-authors">Sungwoo Park, Dongjun Kim, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">ICML 2024 · Oral Presentation</div>
+            <div class="pub-links">
+              <a href="https://openreview.net/forum?id=lgcFX4VFrM" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024" data-venue-type="top-conf" data-students="schubert">
+          <div>
+            <div class="pub-title">InstructCV: Instruction-Tuned Text-to-Image Diffusion Models as Vision Generalists</div>
+            <div class="pub-authors">Yulu Gan, Sungwoo Park, <a href="people/schubert.html" class="member-link"><strong>Alexander Schubert</strong></a>, Anthony Philippakis, <a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a></div>
+            <div class="pub-venue">ICLR · 2024</div>
+            <div class="pub-links">
+              <a href="https://openreview.net/forum?id=Nu9mOSq7eH" target="_blank">Paper</a>
+              <a href="https://github.com/AlaaLab/InstructCV" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024" data-students="mehandru">
+          <div>
+            <div class="pub-title">Evaluating Large Language Models as Agents in the Clinic</div>
+            <div class="pub-authors"><a href="people/mehandru.html" class="member-link"><strong>Nikita Mehandru</strong></a>, Brenda Miao, Eduardo Rodriguez Almaraz, Madhumita Sushil, Atul Butte, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">NPJ Digital Medicine · 2024</div>
+            <div class="pub-links">
+              <a href="https://www.nature.com/articles/s41746-024-01083-y" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024">
+          <div>
+            <div class="pub-title">Artificial Intelligence–Based Copilots to Generate Causal Evidence</div>
+            <div class="pub-authors">M. Petersen, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, E. Kıcıman, C. Holmes, M. van der Laan</div>
+            <div class="pub-venue">NEJM AI · 2024</div>
+            <div class="pub-links">
+              <a href="https://ai.nejm.org/doi/abs/10.1056/AIp2400727" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024" data-students="schubert">
+          <div>
+            <div class="pub-title">Pruning the Way to Reliable Policies: A Multi-Objective Deep Q-Learning Approach to Critical Care</div>
+            <div class="pub-authors">A. Shirali, <a href="people/schubert.html" class="member-link"><strong>Alexander Schubert</strong></a>, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">IEEE Journal of Biomedical and Health Informatics · 2024</div>
+            <div class="pub-links">
+              <a href="https://ieeexplore.ieee.org/document/10559219/" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024">
+          <div>
+            <div class="pub-title">A Machine Learning Approach for Predicting Textbook Outcome After Cytoreductive Surgery and Hyperthermic Intraperitoneal Chemotherapy</div>
+            <div class="pub-authors">A. Ashraf Ganjouei, F. Romero-Hernandez, J.J. Wang, A. Hamed, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, et al.</div>
+            <div class="pub-venue">World Journal of Surgery · 2024</div>
+            <div class="pub-links">
+              <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/wjs.12184" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024">
+          <div>
+            <div class="pub-title">Generating New Drug Repurposing Hypotheses Using Disease-Specific Hypergraphs</div>
+            <div class="pub-authors">Ayush Jain, Marie-Laure Charpignon, Irene Y. Chen, Anthony Philippakis, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">Pacific Symposium on Biocomputing · 2024</div>
+            <div class="pub-links">
+              <a href="http://psb.stanford.edu/psb-online/proceedings/psb24/jain.pdf" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024" data-students="schubert">
+          <div>
+            <div class="pub-title">Dr-LLaVA: Visual Instruction Tuning with Symbolic Clinical Grounding</div>
+            <div class="pub-authors">Shenghuan Sun, Greg M. Goldgof, <a href="people/schubert.html" class="member-link"><strong>Alexander Schubert</strong></a>, Z. Sun, Thomas Hartvigsen, Atul J. Butte, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">NeurIPS Workshop on Multimodal Algorithmic Reasoning · 2024</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2405.19567" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024">
+          <div>
+            <div class="pub-title">Veridical Data Science for Medical Foundation Models</div>
+            <div class="pub-authors"><a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Bin Yu</div>
+            <div class="pub-venue">arXiv preprint · 2024</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2409.10580" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024">
+          <div>
+            <div class="pub-title">Large Language Models as Co-Pilots for Causal Inference in Medical Studies</div>
+            <div class="pub-authors"><a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, R.V. Phillips, E. Kıcıman, L.B. Balzer, M. van der Laan, M. Petersen</div>
+            <div class="pub-venue">arXiv preprint · 2024</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2407.19118" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024">
+          <div>
+            <div class="pub-title">Seq-to-Final: A Benchmark for Tuning from Sequential Distributions to a Final Time Point</div>
+            <div class="pub-authors">C.X. Ji, <a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a>, David Sontag</div>
+            <div class="pub-venue">arXiv preprint · 2024</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2407.09642" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024">
+          <div>
+            <div class="pub-title">EEG-GPT: Exploring Capabilities of Large Language Models for EEG Classification and Interpretation</div>
+            <div class="pub-authors">J.W. Kim, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, D. Bernardo</div>
+            <div class="pub-venue">arXiv preprint · 2024</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2401.18006" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024">
+          <div>
+            <div class="pub-title">Generation of Guideline-Based Clinical Decision Trees in Oncology Using Large Language Models</div>
+            <div class="pub-authors">Brenda Y. Miao, Eduardo Rodriguez Almaraz, A. Ashraf Ganjouei, A. Suresh, Travis Zack, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, et al.</div>
+            <div class="pub-venue">medRxiv · 2024</div>
+            <div class="pub-links">
+              <a href="https://www.medrxiv.org/content/10.1101/2024.03.04.24303737v1" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2024">
+          <div>
+            <div class="pub-title">Deep Learning-Derived Splenic Radiomics, Genomics, and Coronary Artery Disease</div>
+            <div class="pub-authors">M. Kamineni, V.K. Raghu, B. Truong, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, A. Schuermans, S.F. Friedman, et al.</div>
+            <div class="pub-venue">medRxiv · 2024</div>
+            <div class="pub-links">
+              <a href="https://www.medrxiv.org/content/10.1101/2024.08.16.24312129v2" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 2023 ─────────────────────────────────── -->
+
+        <div class="pub-item" data-filter-val="2023" data-venue-type="top-conf">
+          <div>
+            <div class="pub-title">Conformal Meta-Learners for Predictive Inference of Individual Treatment Effects</div>
+            <div class="pub-authors"><a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Zaid Ahmad, Mark van der Laan</div>
+            <div class="pub-venue">NeurIPS 2023 · Oral Presentation</div>
+            <div class="pub-links">
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/94ab02a30b0e4a692a42ccd0b4c55399-Paper-Conference.pdf" target="_blank">Paper</a>
+              <a href="https://github.com/AlaaLab/conformal-metalearners" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2023" data-venue-type="top-conf">
+          <div>
+            <div class="pub-title">DiffInfinite: Large Mask-Image Synthesis via Parallel Random Patch Diffusion in Histopathology</div>
+            <div class="pub-authors">Marco Aversa, Gabriel Nobis, Miriam Hägele, Kai Standvoss, Mihaela Chirica, Roderick Murray-Smith, <a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a>, Lukas Ruff, Daniela Ivanova, Wojciech Samek, Frederick Klauschen, Bruno Sanguinetti, Luis Oala</div>
+            <div class="pub-venue">NeurIPS 2023 · Spotlight</div>
+            <div class="pub-links">
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/f64927f5de00c47899e6e58c731966b6-Paper-Datasets_and_Benchmarks.pdf" target="_blank">Paper</a>
+              <a href="https://github.com/marcoaversa/diffinfinite" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2023" data-venue-type="top-conf">
+          <div>
+            <div class="pub-title">Aligning Synthetic Medical Images with Clinical Knowledge using Human Feedback</div>
+            <div class="pub-authors">Shenghuan Sun, Greg Goldgof, Atul Butte, <a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a></div>
+            <div class="pub-venue">NeurIPS 2023 · Spotlight</div>
+            <div class="pub-links">
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/2b1d1e5affe5fdb70372cd90dd8afd49-Paper-Conference.pdf" target="_blank">Paper</a>
+              <a href="https://github.com/AlaaLab/pathologist-in-the-loop" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2023">
+          <div>
+            <div class="pub-title">Conformalized Unconditional Quantile Regression</div>
+            <div class="pub-authors"><a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a>, Z. Hussain, David Sontag</div>
+            <div class="pub-venue">AISTATS · 2023</div>
+            <div class="pub-links">
+              <a href="https://proceedings.mlr.press/v206/alaa23a.html" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2023">
+          <div>
+            <div class="pub-title">PREDICT Underestimates Survival of Patients with HER2-Positive Early-Stage Breast Cancer</div>
+            <div class="pub-authors"><a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a>, A.L. Harris, Mihaela van der Schaar</div>
+            <div class="pub-venue">npj Breast Cancer · 2023</div>
+            <div class="pub-links">
+              <a href="https://www.nature.com/articles/s41523-022-00452-8" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2023">
+          <div>
+            <div class="pub-title">External Validity of Machine Learning-Based Prognostic Scores for Cystic Fibrosis: A Retrospective Study Using the UK and Canadian Registries</div>
+            <div class="pub-authors">Y. Qin, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, A. Floto, Mihaela van der Schaar</div>
+            <div class="pub-venue">PLOS Digital Health · 2023</div>
+            <div class="pub-links">
+              <a href="https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000179" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2023">
+          <div>
+            <div class="pub-title">Large-Scale Study of Temporal Shift in Health Insurance Claims</div>
+            <div class="pub-authors">C.X. Ji, <a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a>, David Sontag</div>
+            <div class="pub-venue">Conference on Health, Inference, and Learning (CHIL) · 2023</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2305.05087" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2023">
+          <div>
+            <div class="pub-title">Generating Drug Repurposing Hypotheses through the Combination of Disease-Specific Hypergraphs</div>
+            <div class="pub-authors">Ayush Jain, Marie-Laure Charpignon, Irene Y. Chen, Anthony Philippakis, <a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+            <div class="pub-venue">Machine Learning for Health (ML4H) · 2023</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2311.09596" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2023">
+          <div>
+            <div class="pub-title">Estimating Uncertainty in Multimodal Foundation Models using Public Internet Data</div>
+            <div class="pub-authors">Shiladitya Dutta, H. Wei, Lars van der Laan, <a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a></div>
+            <div class="pub-venue">NeurIPS Workshop on Robustness of Few-shot and Zero-shot Models · 2023</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2310.09926" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2023">
+          <div>
+            <div class="pub-title">Identifying Splenic Radiomics Features Associated with Risk of Coronary Artery Disease</div>
+            <div class="pub-authors">M. Kamineni, Z. Yu, V.K. Raghu, <a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a>, A. Schuermans, S.F. Friedman, et al.</div>
+            <div class="pub-venue">Circulation · 2023 · Abstract</div>
+            <div class="pub-links">
+              <a href="https://www.ahajournals.org/doi/10.1161/circ.148.suppl_1.16844" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 2022 ─────────────────────────────────── -->
+
+        <div class="pub-item" data-filter-val="2022" data-venue-type="top-conf">
+          <div>
+            <div class="pub-title">How Faithful is your Synthetic Data? Sample-Level Metrics for Evaluating and Auditing Generative Models</div>
+            <div class="pub-authors"><a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a>, Boris van Breugel, Evgeny Saveliev, Mihaela van der Schaar</div>
+            <div class="pub-venue">ICML · 2022</div>
+            <div class="pub-links">
+              <a href="https://proceedings.mlr.press/v162/alaa22a/alaa22a.pdf" target="_blank">Paper</a>
+              <a href="https://github.com/vanderschaarlab/evaluating-generative-models" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2022" data-venue-type="top-conf">
+          <div>
+            <div class="pub-title">ETAB: A Benchmark Suite for Visual Representation Learning in Echocardiography</div>
+            <div class="pub-authors"><a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Anthony Philippakis, David Sontag</div>
+            <div class="pub-venue">NeurIPS · 2022</div>
+            <div class="pub-links">
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/796501434d0dc3a039d5b91261f7f889-Paper-Datasets_and_Benchmarks.pdf" target="_blank">Paper</a>
+              <a href="https://github.com/AlaaLab/ETAB" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-filter-val="2022">
+          <div>
+            <div class="pub-title">Mining for Informative Signals in Biological Sequences</div>
+            <div class="pub-authors"><a href="people/ahmed.html" class="member-link"><strong>Ahmed M. Alaa</strong></a></div>
+            <div class="pub-venue">Nature Machine Intelligence · 2022</div>
+            <div class="pub-links">
+              <a href="https://www.nature.com/articles/s42256-022-00524-1" target="_blank">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- empty state -->
+        <div id="pub-empty" class="pub-empty" style="display:none;">No papers match this filter combination.</div>
+
+      </div>
+      <div id="pub-pagination" class="pub-pagination" hidden></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-note">© 2026 Alaa Lab</span>
+      <nav class="footer-links">
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="https://github.com/AlaaLab" target="_blank">Software</a>
+        <a href="news.html">News</a>
+        <a href="media.html">Media</a>
+        <a href="sponsors.html">Sponsors</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    (function () {
+      const ITEMS_PER_PAGE = 20;
+      const pubList     = document.getElementById('pub-list');
+      const emptyMsg    = document.getElementById('pub-empty');
+      const paginationEl = document.getElementById('pub-pagination');
+      const yearSelect  = document.getElementById('year-select');
+      const memberSelect = document.getElementById('student-select');
+      const searchInput = document.getElementById('pub-search');
+      if (!pubList) return;
+
+      let activeVenue  = 'all';
+      let activeYear   = 'all';
+      let activeMember = 'all';
+      let activeQuery  = '';
+      let currentPage  = 1;
+
+      function itemPasses(item) {
+        const year    = item.getAttribute('data-filter-val');
+        const isTop   = item.getAttribute('data-venue-type') === 'top-conf';
+        const members = (item.getAttribute('data-students') || '').split(' ').filter(Boolean);
+        const text    = item.textContent.toLowerCase();
+        return (activeVenue  === 'all' || isTop) &&
+               (activeYear   === 'all' || year === activeYear) &&
+               (activeMember === 'all' || members.includes(activeMember)) &&
+               (activeQuery  === '' || text.includes(activeQuery));
+      }
+
+      function getFiltered() {
+        return Array.from(pubList.querySelectorAll('.pub-item')).filter(itemPasses);
+      }
+
+      function applyPage(page) {
+        const filtered   = getFiltered();
+        const totalPages = Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE));
+        currentPage = Math.min(Math.max(1, page), totalPages);
+        const start = (currentPage - 1) * ITEMS_PER_PAGE;
+        const end   = start + ITEMS_PER_PAGE;
+
+        Array.from(pubList.querySelectorAll('.pub-item')).forEach(function (item) {
+          const idx = filtered.indexOf(item);
+          item.style.display = (idx >= start && idx < end) ? '' : 'none';
+        });
+
+        if (emptyMsg) emptyMsg.style.display = filtered.length === 0 ? '' : 'none';
+        renderPagination(currentPage, totalPages);
+      }
+
+      function renderPagination(page, totalPages) {
+        if (!paginationEl) return;
+        paginationEl.innerHTML = '';
+        if (totalPages <= 1) { paginationEl.hidden = true; return; }
+        paginationEl.hidden = false;
+
+        function makeBtn(label, targetPage, isActive, isDisabled) {
+          const b = document.createElement('button');
+          b.textContent = label;
+          if (isActive) b.classList.add('pag-active');
+          if (isDisabled) b.disabled = true;
+          else b.addEventListener('click', function () {
+            applyPage(targetPage);
+            pubList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+          return b;
+        }
+
+        paginationEl.appendChild(makeBtn('←', page - 1, false, page === 1));
+        for (var p = 1; p <= totalPages; p++) {
+          paginationEl.appendChild(makeBtn(String(p), p, p === page, false));
+        }
+        paginationEl.appendChild(makeBtn('→', page + 1, false, page === totalPages));
+      }
+
+      document.querySelectorAll('.pub-primary-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          activeVenue = btn.getAttribute('data-filter');
+          document.querySelectorAll('.pub-primary-btn').forEach(function (b) {
+            b.classList.toggle('active', b.getAttribute('data-filter') === activeVenue);
+          });
+          applyPage(1);
+        });
+      });
+
+      if (yearSelect) {
+        yearSelect.addEventListener('change', function () {
+          activeYear = yearSelect.value;
+          yearSelect.classList.toggle('active-select', activeYear !== 'all');
+          applyPage(1);
+        });
+      }
+
+      if (memberSelect) {
+        memberSelect.addEventListener('change', function () {
+          activeMember = memberSelect.value;
+          memberSelect.classList.toggle('active-select', activeMember !== 'all');
+          applyPage(1);
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', function () {
+          activeQuery = searchInput.value.trim().toLowerCase();
+          applyPage(1);
+        });
+      }
+
+      applyPage(1);
+    })();
+  </script>
+</body>
+</html>

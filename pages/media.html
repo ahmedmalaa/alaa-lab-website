@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media — Alaa Lab</title>
+  <meta name="description" content="Videos and talks from Alaa Lab at UC Berkeley and UCSF." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .page-header { padding: 16px 0 24px; margin-bottom: 36px; }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px 20px;
+    }
+    .video-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .video-card:hover .video-title { color: var(--accent); text-decoration: none; }
+    .video-thumb-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--surface);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .video-thumb-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+    .video-card:hover .video-thumb-wrap img { transform: scale(1.02); }
+    .play-icon {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .video-card:hover .play-icon { opacity: 1; }
+    .play-icon svg {
+      width: 48px; height: 48px;
+      background: rgba(0,0,0,0.7); border-radius: 50%;
+      padding: 12px; fill: white;
+    }
+    .video-title {
+      font-size: 0.88rem;
+      font-weight: 500;
+      line-height: 1.4;
+      transition: color 0.15s;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .video-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    @media (max-width: 860px) {
+      .video-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .video-grid { grid-template-columns: 1fr; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-logo" href="../index.html">Alaa Lab at UC Berkeley and UCSF</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="people.html">People</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="people.html">Lab Members</a></li>
+            <li><a href="joining.html">Joining Us</a></li>
+          </ul>
+        </li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="https://github.com/AlaaLab" target="_blank">Software</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header" style="display:flex; align-items:center; gap:40px;">
+        <img src="../assets/images/logo_media.jpeg" alt="Alaa Lab Media" style="height:124px; width:auto; flex-shrink:0; transform:translateY(-7px);" />
+        <div>
+          <h1 style="font-family:'Lora',Georgia,serif; font-weight:400; letter-spacing:-0.01em;">Media</h1>
+          <p>Talks, seminars, and video content from the lab. <a href="https://www.youtube.com/@Alaa-Lab" target="_blank" style="color:var(--accent);">Subscribe on YouTube →</a></p>
+        </div>
+      </div>
+
+      <div class="video-grid">
+
+        <!-- HOW TO ADD A VIDEO:
+             1. Copy a .video-card block.
+             2. Set href to https://www.youtube.com/watch?v=VIDEO_ID
+             3. Set the thumbnail src to https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg
+             4. Update title, views, and date. -->
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=IP9unMmvbNE" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/IP9unMmvbNE/hqdefault.jpg" alt="Rising Stars #15: Paula Gradu" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #15: Paula Gradu (UC Berkeley) — Online Control for Adaptive Tapering of Medications</div>
+          <div class="video-meta">319 views · 1 year ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=8ThEl18jYGw" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/8ThEl18jYGw/hqdefault.jpg" alt="ICLR 2024 - InstructCV" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">ICLR 2024 — InstructCV: Instruction-Tuned Text-to-Image Diffusion Models as Vision Generalists</div>
+          <div class="video-meta">425 views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=aDGCmS-o47Y" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/aDGCmS-o47Y/hqdefault.jpg" alt="Rising Stars #14: Ying Jin" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #14 — Conformal Prediction Series: Ying Jin (Stanford)</div>
+          <div class="video-meta">720 views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=nIMnl_5I8i0" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/nIMnl_5I8i0/hqdefault.jpg" alt="Rising Stars #13: David Stutz" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #13 — Conformal Prediction Series: David Stutz (DeepMind)</div>
+          <div class="video-meta">1.1K views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=t3jP6Ev2VsQ" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/t3jP6Ev2VsQ/hqdefault.jpg" alt="Rising Stars #12: Tiffany Ding" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #12 — Conformal Prediction Series: Tiffany Ding (UC Berkeley)</div>
+          <div class="video-meta">777 views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=ZlCQocvgM5E" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/ZlCQocvgM5E/hqdefault.jpg" alt="Rising Stars #11: Kexin Huang" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #11 — Conformal Prediction Series: Kexin Huang (Stanford University)</div>
+          <div class="video-meta">2.9K views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=rvYnR0FGxM4" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/rvYnR0FGxM4/hqdefault.jpg" alt="Rising Stars #10: Isaac Gibbs" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #10 — Conformal Prediction Series: Isaac Gibbs (Stanford University)</div>
+          <div class="video-meta">1.9K views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=BU4t1HPcOCg" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/BU4t1HPcOCg/hqdefault.jpg" alt="Rising Stars #9: Anastasios Angelopoulos" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #9 — Conformal Prediction Series: Anastasios N. Angelopoulos (UC Berkeley)</div>
+          <div class="video-meta">2.6K views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=TlFpVpFx7JY" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/TlFpVpFx7JY/hqdefault.jpg" alt="Rising Stars #8: Clara Wong-Fannjiang" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #8: Clara Wong-Fannjiang (Genentech) — Prediction-Powered Inference</div>
+          <div class="video-meta">2.1K views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=GVs7gQLAPd8" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/GVs7gQLAPd8/hqdefault.jpg" alt="Rising Stars #7: Zhi Huang" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #7: Zhi Huang (Stanford) — A Vision-Language Model for Pathology using Medical Twitter</div>
+          <div class="video-meta">540 views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=3WhHQ0PqkDg" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/3WhHQ0PqkDg/hqdefault.jpg" alt="Rising Stars #6: Seyone Chithrananda" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #6: Seyone Chithrananda (UC Berkeley) — Understanding the Combinatorial Code of Smell</div>
+          <div class="video-meta">574 views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=0dt3S2mt7Sw" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/0dt3S2mt7Sw/hqdefault.jpg" alt="Rising Stars #5: Ruishan Liu" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #5: Ruishan Liu (Stanford) — ML for Clinical Trials and Precision Medicine</div>
+          <div class="video-meta">733 views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=s2e5HibC9Tk" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/s2e5HibC9Tk/hqdefault.jpg" alt="Rising Stars #4: Karan Singhal" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #4: Karan Singhal (Google) — LLMs for Transformative Healthcare at Scale (Med-PaLM)</div>
+          <div class="video-meta">562 views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=75kgff9Ap7g" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/75kgff9Ap7g/hqdefault.jpg" alt="Rising Stars #3: Orson Xu" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #3: Orson Xu (UW) — Toward Next-Generation Health and Well-being</div>
+          <div class="video-meta">335 views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=ZP-bspjHIAY" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/ZP-bspjHIAY/hqdefault.jpg" alt="Rising Stars #2: Lavender Jiang" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #2: Lavender Jiang (NYU) — NYUTron: A Health System-scale Language Model</div>
+          <div class="video-meta">357 views · 2 years ago</div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=uHL6uf_2KO0" target="_blank">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/uHL6uf_2KO0/hqdefault.jpg" alt="Rising Stars #1: Sam Robertson" loading="lazy" />
+            <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-title">Rising Stars #1: Sam Robertson (UC Berkeley) — Designing for Verifiability in ML Systems</div>
+          <div class="video-meta">822 views · 2 years ago</div>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-note">© 2026 Alaa Lab</span>
+      <nav class="footer-links">
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="https://github.com/AlaaLab" target="_blank">Software</a>
+        <a href="news.html">News</a>
+        <a href="media.html">Media</a>
+        <a href="sponsors.html">Sponsors</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

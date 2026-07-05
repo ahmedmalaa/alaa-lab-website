@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News — Alaa Lab</title>
+  <meta name="description" content="Latest news and updates from Lab Name." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .page-header { padding: 16px 0 24px; margin-bottom: 36px; }
+    .social-card {
+      display: flex; flex-direction: column;
+      margin-top: 16px;
+      border: 1px solid var(--border); border-radius: 10px;
+      overflow: hidden; max-width: 440px;
+      font-size: 0.85rem; background: var(--bg);
+    }
+    .social-card-image {
+      width: 100%; aspect-ratio: 16/9;
+      background: var(--surface);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: 0.78rem; border-bottom: 1px solid var(--border);
+    }
+    .social-card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .social-card-body-wrap { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+    .social-card-header { display: flex; align-items: center; gap: 10px; }
+    .social-card-author { font-weight: 500; font-size: 0.875rem; }
+    .social-card-meta { font-size: 0.75rem; color: var(--muted); }
+    .social-card-text { color: var(--text); line-height: 1.55; }
+    .social-card-seemore { background: none; border: none; padding: 0; cursor: pointer; color: var(--muted); font-size: 0.85rem; font-family: inherit; }
+    .social-card-seemore:hover { color: var(--text); }
+    .social-card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 4px; border-top: 1px solid var(--border); }
+    .social-card-reactions { font-size: 0.75rem; color: var(--muted); }
+    .social-card-link { font-size: 0.78rem; color: #0A66C2; text-decoration: none; }
+    .social-card-link:hover { text-decoration: underline; }
+    .news-pagination {
+      display: flex; align-items: center; justify-content: center;
+      gap: 6px; margin: 32px 0 8px;
+    }
+    .news-pagination button {
+      min-width: 36px; height: 36px; padding: 0 10px;
+      background: none; border: 1px solid var(--border); border-radius: 6px;
+      cursor: pointer; font-size: 0.875rem; font-family: inherit; color: var(--text);
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+    .news-pagination button:hover:not(:disabled) {
+      background: var(--surface); border-color: var(--accent); color: var(--accent);
+    }
+    .news-pagination button:disabled { opacity: 0.3; cursor: default; }
+    .news-pagination button.pag-active {
+      background: var(--accent); border-color: var(--accent); color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-logo" href="../index.html">Alaa Lab at UC Berkeley and UCSF</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="people.html">People</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="people.html">Lab Members</a></li>
+            <li><a href="joining.html">Joining Us</a></li>
+          </ul>
+        </li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="https://github.com/AlaaLab" target="_blank">Software</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header" style="display:flex; align-items:center; gap:40px;">
+        <img src="../assets/images/logo_news.png" alt="Alaa Lab News" style="height:110px; width:auto; flex-shrink:0;" />
+        <div>
+          <h1 style="font-family:'Lora',Georgia,serif; font-weight:400; letter-spacing:-0.01em;">News</h1>
+          <p>Lab updates, latest research, awards, and announcements.</p>
+        </div>
+      </div>
+
+      <!-- Year filter -->
+      <div class="filter-bar" data-target="news-list">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="2026">2026</button>
+        <button class="filter-btn" data-filter="2025">2025</button>
+        <button class="filter-btn" data-filter="2024">2024</button>
+        <button class="filter-btn" data-filter="2023">2023</button>
+      </div>
+
+      <div class="news-list" id="news-list">
+
+        <div class="news-item" data-filter-val="2026" data-students="schubert fields kaur dean">
+          <span class="news-date">Jun 2026</span>
+          <div>
+            <ul class="news-text">
+              <li>New paper in <a href="https://www.nature.com/articles/s41586-026-10674-6" target="_blank">Nature</a> by <a href="people/schubert.html" class="member-link"><strong>Alex</strong></a> on ECG-based biomarkers for sudden cardiac death!</li>
+              <li>Congratulations to <a href="people/fields.html" class="member-link"><strong>Jenna Fields</strong></a> and <a href="people/dean.html" class="member-link"><strong>Franny Dean</strong></a> on passing the qual exam! 🎉🎓</li>
+              <li>Congratulations to <a href="people/kaur.html" class="member-link"><strong>Jivat Kaur</strong></a> for receiving a Stellar Abstract Award at <a href="https://statsupai.org/STAIX2026/index.html" target="_blank">STAI-X 2026</a>! 🏆</li>
+              <li><a href="people/dean.html" class="member-link"><strong>Franny Dean</strong></a> presents her work on AI surrogates for causal effect estimation in ASCO!</li>
+            </ul>
+            <div class="social-card">
+              <div class="social-card-image">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQHyF0tLOoAHSQ/feedshare-shrink_800/B56Z6I20UvHUAg-/0/1780412535579?e=2147483647&v=beta&t=a3mGP5X8y_38WDQWfojoSismttV59pMYVJmemAgkPMk"
+                     alt="Franny Dean at ASCO 2026" />
+              </div>
+              <div class="social-card-body-wrap">
+                <div class="social-card-header">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" style="flex-shrink:0;"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path d="M8 19H5V9h3v10zM6.5 7.7a1.7 1.7 0 110-3.4 1.7 1.7 0 010 3.4zM20 19h-3v-4.9c0-1.2-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V19h-3V9h2.88v1.36h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V19z" fill="#fff"/></svg>
+                  <div>
+                    <div class="social-card-author">Frances Dean</div>
+                    <div class="social-card-meta">LinkedIn · Jun 2026</div>
+                  </div>
+                </div>
+                <div class="social-card-text">
+                  <span class="sc-short">Excited to present our work on AI-ECG surrogates for secondary effects of cancer treatments at <strong>#ASCO2026</strong>…</span>
+                  <span class="sc-full" hidden>Excited to present our work on AI-ECG surrogates for secondary effects of cancer treatments at <strong>#ASCO2026</strong>! Grateful for the rich discussions with medical doctors, industry professionals, and patients — a great reminder of why rigorous AI method development matters.</span>
+                  <button class="social-card-seemore" onclick="this.previousElementSibling.hidden=false;this.previousElementSibling.previousElementSibling.hidden=true;this.remove();">See more</button>
+                </div>
+                <div class="social-card-footer">
+                  <span class="social-card-reactions">87 reactions · 3 comments</span>
+                  <a href="https://www.linkedin.com/posts/frances-dean-37316710b_asco2026-share-7467591422871941122-ZLOl/" target="_blank" class="social-card-link">View on LinkedIn →</a>
+                </div>
+              </div>
+            </div>
+            <ul class="news-text" style="margin-top:12px;">
+              <li>📣 <strong>Announcement:</strong> We're excited to share <strong>ER-Reason</strong>, a new dataset of 25K+ de-identified, real clinical notes on <a href="https://physionet.org/content/er-reason/1.0.0/" target="_blank">PhysioNet</a>, covering the entire emergency care workflow. For a subset of the data, we also introduce benchmark items designed to evaluate clinical reasoning using script concordance test-style questions. Read our <a href="https://arxiv.org/abs/2505.22919" target="_blank">paper</a> to learn more!</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="news-item" data-filter-val="2026">
+          <span class="news-date">May 2026</span>
+          <div style="display:flex; gap:20px; align-items:stretch;">
+            <ul class="news-text" style="flex:1; min-width:0;">
+              <li>📣 <strong>Announcement:</strong> In collaboration with Stanford University, we created <strong>CheXthought</strong>, a new dataset for training and evaluating medical VLMs! More than 100K visually grounded CoT traces from 50K chest X-rays, annotated by 500+ radiologists across 71 countries. CheXthought will be available <a href="https://huggingface.co/StanfordAIMI" target="_blank">here</a>.</li>
+            </ul>
+            <div style="width:220px; flex-shrink:0; border-radius:6px; overflow:hidden; position:relative;">
+              <img src="../content/news/chexthought.jpeg" alt="CheXthought figure" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:top;" />
+            </div>
+          </div>
+        </div>
+
+        <div class="news-item" data-filter-val="2026" data-students="golchini">
+          <span class="news-date">Apr 2026</span>
+          <div>
+            <ul class="news-text">
+              <li>Our lab participated in the <a href="https://computationalhealth.berkeley.edu/ficph-landing-page/" target="_blank">Frontiers in CPH</a> conference with various talks and posters!</li>
+            </ul>
+            <img src="../content/news/CPH_frontiers.png" alt="Frontiers in CPH conference" style="max-width:440px; width:100%; border-radius:8px; margin-top:14px;" />
+            <ul class="news-text" style="margin-top:12px;">
+              <li><a href="publications.html">Two papers</a> accepted at ICML!</li>
+              <li>Our lab is part of a team awarded a moonshot seed grant from the <a href="https://www.laude.org/" target="_blank">Laude Institute</a>! 🏆</li>
+            </ul>
+            <div class="social-card">
+              <div class="social-card-image">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQECvZLkDQH1pA/feedshare-image-high-res/B56Z2SLFx5KMAU-/0/1776273874741?e=1784160000&v=beta&t=FcFTYa03lUIc9u3Ih3mdsYDY4x3uHLLF6bTZqMbSDzM" alt="CPH Laude Institute Moonshots announcement" />
+              </div>
+              <div class="social-card-body-wrap">
+                <div class="social-card-header">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" style="flex-shrink:0;"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path d="M8 19H5V9h3v10zM6.5 7.7a1.7 1.7 0 110-3.4 1.7 1.7 0 010 3.4zM20 19h-3v-4.9c0-1.2-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V19h-3V9h2.88v1.36h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V19z" fill="#fff"/></svg>
+                  <div>
+                    <div class="social-card-author">UCSF UC Berkeley Joint Program in Computational Precision Health</div>
+                    <div class="social-card-meta">LinkedIn · Apr 2026</div>
+                  </div>
+                </div>
+                <div class="social-card-text">
+                  <span class="sc-short">We are proud to announce that Ida Sim, MD, PhD, and researchers' proposal for the Center for Edge Medicine has been selected as one of eight winners of the Laude Institute's Moonshots grant…</span>
+                  <span class="sc-full" hidden>We are proud to announce that Ida Sim, MD, PhD, and researchers' proposal for the Center for Edge Medicine has been selected as one of eight winners of the Laude Institute's Moonshots grant — a competitive initiative funding AI research to tackle some of humanity's hardest problems. The $250,000 seed grant supports six months of focused work building open-source AI infrastructure for health for frontline healthcare: the kind that works in patients' daily lives, not just clinics and hospitals. The project was selected under the program's Frontline Healthcare domain, which focuses on AI applications to support diagnosis, treatment, and patient care.</span>
+                  <button class="social-card-seemore" onclick="this.previousElementSibling.hidden=false;this.previousElementSibling.previousElementSibling.hidden=true;this.remove();">See more</button>
+                </div>
+                <div class="social-card-footer">
+                  <span class="social-card-reactions">62 reactions · 1 comment</span>
+                  <a href="https://www.linkedin.com/posts/jointcph_we-are-proud-to-announce-that-ida-sim-md-activity-7450235244785614848-A9Ze" target="_blank" class="social-card-link">View on LinkedIn →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-item" data-filter-val="2026" data-students="schubert kaur hou liang golchini">
+          <span class="news-date">Mar 2026</span>
+          <div>
+            <ul class="news-text">
+              <li>We celebrated <a href="people/schubert.html" class="member-link"><strong>Alex</strong></a>, <a href="people/kaur.html" class="member-link"><strong>Jivat</strong></a>, <a href="people/hou.html" class="member-link"><strong>William</strong></a>, and <a href="people/liang.html" class="member-link"><strong>Zhongyuan</strong></a>'s advancement to candidacy! 🎉</li>
+            </ul>
+            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-top:14px; border-radius:8px; overflow:hidden;">
+              <img src="../content/news/Alex_candidacy.png" alt="Alex Schubert candidacy" style="width:100%; aspect-ratio:3/2; object-fit:cover; display:block;" />
+              <img src="../content/news/Jivat_candidacy.png" alt="Jivat Kaur candidacy" style="width:100%; aspect-ratio:3/2; object-fit:cover; display:block;" />
+              <img src="../content/news/William_candidacy.png" alt="William Hou candidacy" style="width:100%; aspect-ratio:3/2; object-fit:cover; display:block;" />
+              <img src="../content/news/Zhongyuan_candidacy.png" alt="Zhongyuan Liang candidacy" style="width:100%; aspect-ratio:3/2; object-fit:cover; display:block;" />
+            </div>
+            <ul class="news-text" style="margin-top:12px;">
+              <li><a href="people/golchini.html" class="member-link"><strong>Nilo Golchini</strong></a> is admitted to the UC Berkeley - UCSF Joint Medical Program! Congrats to the first ever MD student in our lab!</li>
+            </ul>
+            <div class="social-card">
+              <div class="social-card-image">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQHobZBHilr6jA/feedshare-shrink_1280/B56Z309jwPGoAM-/0/1777931271426?e=1784160000&v=beta&t=UgbvUpmkBMhasMYFYIz2i0txi8OPIhBn_1s15OABtcU" alt="Niloufar Golchini JMP announcement" />
+              </div>
+              <div class="social-card-body-wrap">
+                <div class="social-card-header">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" style="flex-shrink:0;"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path d="M8 19H5V9h3v10zM6.5 7.7a1.7 1.7 0 110-3.4 1.7 1.7 0 010 3.4zM20 19h-3v-4.9c0-1.2-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V19h-3V9h2.88v1.36h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V19z" fill="#fff"/></svg>
+                  <div>
+                    <div class="social-card-author">Niloufar Golchini</div>
+                    <div class="social-card-meta">LinkedIn · Mar 2026</div>
+                  </div>
+                </div>
+                <div class="social-card-text">
+                  <span class="sc-short">I am humbled to announce that I will be attending medical school this fall through the UCSF-UCB Joint Medical Program, earning my MS through UC Berkeley School of Public Health and MD at UCSF simultaneously… 🎉</span>
+                  <span class="sc-full" hidden>I am humbled to announce that I will be attending medical school this fall through the UCSF-UCB Joint Medical Program, where I will be earning my MS through UC Berkeley School of Public Health, and MD at University of California, San Francisco - School of Medicine simultaneously. 🎉 I am beyond thrilled to return to two of the leading institutions in research and innovation in medicine — and of course, the same institutions that gave me the opportunity to work alongside leaders at the UCSF &amp; UC Berkeley Computational Precision Health, Professor Ahmed M. Alaa, and Travis Zack, MD, PhD at the intersection of AI/ML and healthcare, with patients always at the center. I am so grateful to my family, friends, and professional mentors who have supported me every step of the way. I am ready to get to work! ⚕️</span>
+                  <button class="social-card-seemore" onclick="this.previousElementSibling.hidden=false;this.previousElementSibling.previousElementSibling.hidden=true;this.remove();">See more</button>
+                </div>
+                <div class="social-card-footer">
+                  <span class="social-card-reactions">603 reactions · 51 comments</span>
+                  <a href="https://www.linkedin.com/posts/niloufar-golchini_jmp-ucsf-ucberkeley-activity-7457184245997019136-Pj_c" target="_blank" class="social-card-link">View on LinkedIn →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-item" data-filter-val="2026" data-students="liang">
+          <span class="news-date">Jan 2026</span>
+          <span class="news-text">Congratulations to <a href="people/liang.html" class="member-link"><strong>Zhongyuan Liang</strong></a> on the acceptance of his paper at AISTATS!</span>
+        </div>
+
+        <div class="news-item" data-filter-val="2025" data-students="mehandru">
+          <span class="news-date">Nov 2025</span>
+          <div>
+            <ul class="news-text">
+              <li>Our paper on medical disclaimers and safety messaging in LLMs was featured in the <a href="https://www.nytimes.com/2025/11/16/briefing/meet-dr-chatgpt.html?unlocked_article_code=1.1k8.Q4Ac.rtVRNbAeAvPD&smid=url-share" target="_blank">New York Times</a>!</li>
+            </ul>
+            <div class="social-card" style="margin-top:16px;">
+              <div class="social-card-body-wrap">
+                <div class="social-card-header">
+                  <svg viewBox="0 0 24 24" width="22" height="22" style="flex-shrink:0;" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#000"/><text x="12" y="17" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-weight="bold" fill="#fff">T</text></svg>
+                  <div>
+                    <div class="social-card-author">The New York Times</div>
+                    <div class="social-card-meta">The Morning · Nov 16, 2025</div>
+                  </div>
+                </div>
+                <div class="social-card-text" style="font-weight:500; font-size:0.9rem;">Meet Dr. ChatGPT</div>
+                <div class="social-card-footer" style="border-top:none; padding-top:0;">
+                  <span class="social-card-reactions"></span>
+                  <a href="https://www.nytimes.com/2025/11/16/briefing/meet-dr-chatgpt.html?unlocked_article_code=1.1k8.Q4Ac.rtVRNbAeAvPD&smid=url-share" target="_blank" class="social-card-link" style="color:#000;">Read article →</a>
+                </div>
+              </div>
+            </div>
+            <ul class="news-text" style="margin-top:12px;">
+              <li><a href="people/mehandru.html" class="member-link"><strong>Nikita</strong></a>'s work on BioAgents is featured in a new Microsoft Research blog!</li>
+            </ul>
+            <div class="social-card" style="margin-top:16px;">
+              <div class="social-card-image">
+                <img src="https://media.licdn.com/dms/image/v2/D4E12AQERtwG1UyHulw/article-cover_image-shrink_720_1280/B4EZqSyQMHJgAI-/0/1763399238834?e=2147483647&v=beta&t=b0AxABaTiy8XeDHeSnME0Itp2pjg9ODIYK57Xzyv6i0" alt="Microsoft Research blog" />
+              </div>
+              <div class="social-card-body-wrap">
+                <div class="social-card-header">
+                  <svg viewBox="0 0 24 24" width="22" height="22" style="flex-shrink:0;" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="1"/><rect x="4" y="4" width="7" height="7" fill="#F25022"/><rect x="13" y="4" width="7" height="7" fill="#7FBA00"/><rect x="4" y="13" width="7" height="7" fill="#00A4EF"/><rect x="13" y="13" width="7" height="7" fill="#FFB900"/></svg>
+                  <div>
+                    <div class="social-card-author">Microsoft Research</div>
+                    <div class="social-card-meta">LinkedIn · Nov 2025</div>
+                  </div>
+                </div>
+                <div class="social-card-text" style="font-weight:500; font-size:0.9rem;">Project Gecko, BioAgents, and more — Microsoft Research highlights</div>
+                <div class="social-card-footer" style="border-top:none; padding-top:0;">
+                  <span class="social-card-reactions"></span>
+                  <a href="https://www.linkedin.com/pulse/project-gecko-workload-intelligence-operator-level-autoscaling-veg3e/?trackingId=bCAg5cjBt3jgwbkHyEEVgQ%3D%3D" target="_blank" class="social-card-link" style="color:#0A66C2;">Read article →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-item" data-filter-val="2025">
+          <span class="news-date">Sep 2025</span>
+          <div>
+            <ul class="news-text">
+              <li>We received a $1 Million grant from the NIH Office of the Director and the Office of Data Science Strategy (ODSS)! The awarded project will develop post-training methods for multimodal foundation models! 🏆</li>
+            </ul>
+            <div class="social-card" style="margin-top:16px;">
+              <div class="social-card-body-wrap">
+                <div class="social-card-header">
+                  <svg viewBox="0 0 40 40" width="22" height="22" style="flex-shrink:0;" aria-hidden="true"><rect width="40" height="40" rx="4" fill="#0d4f8c"/><text x="20" y="27" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff">NIH</text></svg>
+                  <div>
+                    <div class="social-card-author">NIH Office of the Director</div>
+                    <div class="social-card-meta">NIH Reporter · Sep 2025</div>
+                  </div>
+                </div>
+                <div class="social-card-text" style="font-weight:500; font-size:0.9rem;">Post-Training Methods for Multimodal Foundation Models</div>
+                <div class="social-card-footer" style="border-top:none; padding-top:0;">
+                  <span class="social-card-reactions">$1,000,000 award</span>
+                  <a href="https://reporter.nih.gov/search/4qkKgU_FHUiHNdMwNJzD6Q/project-details/11091283" target="_blank" class="social-card-link" style="color:#0d4f8c;">View grant →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-item" data-filter-val="2025" data-students="mehandru">
+          <span class="news-date">Aug 2025</span>
+          <span class="news-text">Congratulations to <a href="people/mehandru.html" class="member-link"><strong>Nikita Mehandru</strong></a> on passing the qual exam! 🎉🎓</span>
+        </div>
+
+        <div class="news-item" data-filter-val="2025">
+          <span class="news-date">Jul 2025</span>
+          <div>
+            <ul class="news-text">
+              <li>Our work on evaluating medical safety messaging in LLMs was featured in MIT Technology Review!</li>
+            </ul>
+            <div class="social-card" style="margin-top:16px;">
+              <div class="social-card-image">
+                <img src="https://wp.technologyreview.com/wp-content/uploads/2025/07/quack-advice_1.jpg" alt="MIT Technology Review article thumbnail" />
+              </div>
+              <div class="social-card-body-wrap">
+                <div class="social-card-header">
+                  <svg viewBox="0 0 24 24" width="22" height="22" style="flex-shrink:0;" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#000"/><text x="12" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#fff">MIT</text></svg>
+                  <div>
+                    <div class="social-card-author">MIT Technology Review</div>
+                    <div class="social-card-meta">Jul 21, 2025</div>
+                  </div>
+                </div>
+                <div class="social-card-text" style="font-weight:500; font-size:0.9rem;">AI companies have stopped warning you that their chatbots aren't doctors</div>
+                <div class="social-card-footer" style="border-top:none; padding-top:0;">
+                  <span class="social-card-reactions"></span>
+                  <a href="https://www.technologyreview.com/2025/07/21/1120522/ai-companies-have-stopped-warning-you-that-their-chatbots-arent-doctors" target="_blank" class="social-card-link" style="color:#000;">Read article →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-item" data-filter-val="2025" data-students="ahmed schubert kaur hou liang">
+          <span class="news-date">May 2025</span>
+          <div>
+            <ul class="news-text">
+              <li><a href="people/ahmed.html" class="member-link"><strong>Ahmed</strong></a> received a 2025 Google Research Scholar Award! 🏆</li>
+            </ul>
+            <div class="social-card" style="margin-top:16px;">
+              <div class="social-card-body-wrap">
+                <div class="social-card-header">
+                  <svg viewBox="0 0 24 24" width="22" height="22" style="flex-shrink:0;" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="1"/><text x="12" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#4285F4">G</text></svg>
+                  <div>
+                    <div class="social-card-author">Google Research</div>
+                    <div class="social-card-meta">Research Scholar Program · 2025</div>
+                  </div>
+                </div>
+                <div class="social-card-text" style="font-weight:500; font-size:0.9rem;">2025 Research Scholar Award Recipients</div>
+                <div class="social-card-footer" style="border-top:none; padding-top:0;">
+                  <span class="social-card-reactions"></span>
+                  <a href="https://research.google/programs-and-events/research-scholar-program/recipients/" target="_blank" class="social-card-link" style="color:#4285F4;">View recipients →</a>
+                </div>
+              </div>
+            </div>
+            <ul class="news-text" style="margin-top:12px;">
+              <li>Our work on AI copilots for generating causal evidence with Maya Petersen, Mark van der Laan, Chris Holmes and Emre Kiciman was featured in a new Microsoft blog!</li>
+            </ul>
+            <div class="social-card" style="margin-top:16px;">
+              <div class="social-card-image">
+                <img src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2025/05/1057428-GMEE-GDC-Cloud-Blog_1260x108-2.webp" alt="Microsoft blog thumbnail" />
+              </div>
+              <div class="social-card-body-wrap">
+                <div class="social-card-header">
+                  <svg viewBox="0 0 24 24" width="22" height="22" style="flex-shrink:0;" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="1"/><rect x="4" y="4" width="7" height="7" fill="#F25022"/><rect x="13" y="4" width="7" height="7" fill="#7FBA00"/><rect x="4" y="13" width="7" height="7" fill="#00A4EF"/><rect x="13" y="13" width="7" height="7" fill="#FFB900"/></svg>
+                  <div>
+                    <div class="social-card-author">Microsoft Cloud Blog</div>
+                    <div class="social-card-meta">May 12, 2025</div>
+                  </div>
+                </div>
+                <div class="social-card-text" style="font-weight:500; font-size:0.9rem;">Microsoft as customer zero: Empowering research teams with AI</div>
+                <div class="social-card-footer" style="border-top:none; padding-top:0;">
+                  <span class="social-card-reactions"></span>
+                  <a href="https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/05/12/microsoft-as-customer-zero-empowering-research-teams-with-ai/" target="_blank" class="social-card-link" style="color:#0078D4;">Read article →</a>
+                </div>
+              </div>
+            </div>
+            <ul class="news-text" style="margin-top:12px;">
+              <li>Congratulations to <a href="people/schubert.html" class="member-link"><strong>Alex Schubert</strong></a>, <a href="people/kaur.html" class="member-link"><strong>Jivat Kaur</strong></a>, <a href="people/hou.html" class="member-link"><strong>William Hou</strong></a>, and <a href="people/liang.html" class="member-link"><strong>Zhongyuan Liang</strong></a> on passing the qual exam! 🎉🎓</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="news-item" data-filter-val="2025">
+          <span class="news-date">Apr 2025</span>
+          <span class="news-text"><a href="publications.html">Two papers</a> accepted at ICML! And <a href="https://openreview.net/forum?id=YuMEUNNpeb" target="_blank">our paper</a> on the construct validity of medical LLM benchmarks was selected for an oral presentation!</span>
+        </div>
+
+        <div class="news-item" data-filter-val="2025">
+          <span class="news-date">Feb 2025</span>
+          <span class="news-text">Congratulations to Jack Jedlicki for being admitted as a PhD student in the Computer Science Department at Harvard University!</span>
+        </div>
+
+        <div class="news-item" data-filter-val="2024">
+          <span class="news-date">Nov 2024</span>
+          <span class="news-text">Our lab received an award from the NSF National AI Research Resource program!</span>
+        </div>
+
+        <div class="news-item" data-filter-val="2024" data-students="schubert">
+          <span class="news-date">Sep 2024</span>
+          <span class="news-text">Congratulations to <a href="people/schubert.html" class="member-link"><strong>Alex Schubert</strong></a> on the selection of his paper as the featured article in the next issue of the IEEE Journal of Biomedical and Health Informatics!</span>
+        </div>
+
+        <div class="news-item" data-filter-val="2024" data-students="ahmed">
+          <span class="news-date">Aug 2024</span>
+          <span class="news-text"><a href="people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a> and Travis Zack win a 2024 Marcus Program Award in Precision Medicine! 🏆</span>
+        </div>
+
+        <div class="news-item" data-filter-val="2024" data-students="ahmed">
+          <span class="news-date">Jun 2024</span>
+          <span class="news-text"><a href="people/ahmed.html" class="member-link"><strong>Ahmed</strong></a> is selected as one of the 2024 <a href="https://vpf.berkeley.edu/faculty-fellowships/society-hellman-fellows-fund" target="_blank">Hellman Fellows</a>! 🏆</span>
+        </div>
+
+        <div class="news-item" data-filter-val="2024">
+          <span class="news-date">May 2024</span>
+          <span class="news-text">Congratulations to Jack Jedlicki for being awarded the La Caixa Foundation fellowship!</span>
+        </div>
+
+        <div class="news-item" data-filter-val="2024">
+          <span class="news-date">Jan 2024</span>
+          <ul class="news-text">
+            <li>Congratulations to Yulu Gan on getting admitted to MIT EECS for his PhD!</li>
+            <li>Congratulations to Marie Charpignon on joining the 2024 cohort of Delivery Science and Clinical Informatics Fellows by Kaiser Permanente!</li>
+          </ul>
+        </div>
+
+        <div class="news-item" data-filter-val="2023" data-students="mehandru">
+          <span class="news-date">Dec 2023</span>
+          <span class="news-text">Congratulations to <a href="people/mehandru.html" class="member-link"><strong>Nikita Mehandru</strong></a> for winning an outstanding paper award at EMNLP 2023!</span>
+        </div>
+
+        <div class="news-item" data-filter-val="2023" data-students="mehandru">
+          <span class="news-date">Nov 2023</span>
+          <span class="news-text">Congratulations to <a href="people/mehandru.html" class="member-link"><strong>Nikita Mehandru</strong></a> for successfully passing her prelim exam!</span>
+        </div>
+
+        <div class="news-item" data-filter-val="2023" data-students="ahmed">
+          <span class="news-date">Sep 2023</span>
+          <div>
+            <ul class="news-text">
+              <li><a href="people/ahmed.html" class="member-link"><strong>Ahmed</strong></a> won an award from the "Accelerating Foundation Models Research" program by Microsoft! 🏆</li>
+            </ul>
+            <div class="social-card" style="margin-top:16px;">
+              <div class="social-card-body-wrap">
+                <div class="social-card-header">
+                  <svg viewBox="0 0 24 24" width="22" height="22" style="flex-shrink:0;" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#fff" stroke="#e0e0e0" stroke-width="1"/><rect x="4" y="4" width="7" height="7" fill="#F25022"/><rect x="13" y="4" width="7" height="7" fill="#7FBA00"/><rect x="4" y="13" width="7" height="7" fill="#00A4EF"/><rect x="13" y="13" width="7" height="7" fill="#FFB900"/></svg>
+                  <div>
+                    <div class="social-card-author">Microsoft Research</div>
+                    <div class="social-card-meta">Accelerating Foundation Models Research · Phase II</div>
+                  </div>
+                </div>
+                <div class="social-card-text" style="font-weight:500; font-size:0.9rem;">Accelerating Foundation Models Research — Phase II</div>
+                <div class="social-card-footer" style="border-top:none; padding-top:0;">
+                  <span class="social-card-reactions"></span>
+                  <a href="https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/phase-ii/" target="_blank" class="social-card-link" style="color:#0078D4;">View program →</a>
+                </div>
+              </div>
+            </div>
+            <ul class="news-text" style="margin-top:12px;">
+              <li>Our lab has three papers accepted to NeurIPS! One paper was selected for an Oral presentation and two papers selected as spotlight posters!</li>
+              <li>Our first NIH grant got funded by NICHD! We will collaborate with the University of Botswana to build ML models for metabolic syndrome in infants with HIV and deploy them in hospitals in east Africa.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div id="news-pagination" class="news-pagination" hidden></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-note">© 2026 Alaa Lab</span>
+      <nav class="footer-links">
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="https://github.com/AlaaLab" target="_blank">Software</a>
+        <a href="news.html">News</a>
+        <a href="media.html">Media</a>
+        <a href="sponsors.html">Sponsors</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+  (function () {
+    const ITEMS_PER_PAGE = 15;
+    const list = document.getElementById('news-list');
+    const paginationEl = document.getElementById('news-pagination');
+    if (!list || !paginationEl) return;
+
+    let currentPage = 1;
+    let activeFilter = 'all';
+
+    function getFiltered() {
+      return Array.from(list.querySelectorAll('.news-item')).filter(
+        el => activeFilter === 'all' || el.getAttribute('data-filter-val') === activeFilter
+      );
+    }
+
+    function applyPage(page) {
+      const filtered = getFiltered();
+      const totalPages = Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE));
+      currentPage = Math.min(Math.max(1, page), totalPages);
+      const start = (currentPage - 1) * ITEMS_PER_PAGE;
+      const end = start + ITEMS_PER_PAGE;
+
+      let n = 0;
+      Array.from(list.querySelectorAll('.news-item')).forEach(el => {
+        if (activeFilter !== 'all' && el.getAttribute('data-filter-val') !== activeFilter) {
+          el.style.display = 'none';
+        } else {
+          el.style.display = (n >= start && n < end) ? '' : 'none';
+          n++;
+        }
+      });
+
+      if (totalPages <= 1) { paginationEl.hidden = true; return; }
+      paginationEl.hidden = false;
+      paginationEl.innerHTML = '';
+
+      function makeBtn(label, targetPage, isActive, isDisabled) {
+        const b = document.createElement('button');
+        b.textContent = label;
+        if (isActive) b.classList.add('pag-active');
+        if (isDisabled) b.disabled = true;
+        else b.addEventListener('click', () => {
+          applyPage(targetPage);
+          list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        return b;
+      }
+
+      paginationEl.appendChild(makeBtn('←', currentPage - 1, false, currentPage === 1));
+      for (let p = 1; p <= totalPages; p++) {
+        paginationEl.appendChild(makeBtn(String(p), p, p === currentPage, false));
+      }
+      paginationEl.appendChild(makeBtn('→', currentPage + 1, false, currentPage === totalPages));
+    }
+
+    const filterBar = document.querySelector('.filter-bar[data-target="news-list"]');
+    if (filterBar) {
+      filterBar.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeFilter = btn.getAttribute('data-filter');
+          applyPage(1);
+        });
+      });
+    }
+
+    applyPage(1);
+  })();
+  </script>
+</body>
+</html>

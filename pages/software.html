@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software — Alaa Lab</title>
+  <meta name="description" content="Open-source software and tools from Lab Name." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-logo" href="../index.html">Alaa Lab at UC Berkeley and UCSF</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="people.html">People</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="people.html">Lab Members</a></li>
+            <li><a href="joining.html">Joining Us</a></li>
+          </ul>
+        </li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="https://github.com/AlaaLab" target="_blank">Software</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Software</h1>
+        <p>Open-source tools, libraries, and datasets developed by the lab.</p>
+      </div>
+
+      <div class="software-list">
+
+        <!--
+          HOW TO ADD A SOFTWARE ENTRY:
+          1. Copy one <div class="software-item"> block below.
+          2. Fill in name, description, and tags.
+          3. Update the links (GitHub, Docs, PyPI, Paper).
+          4. Remove any links that don't apply.
+
+          Common tags: Python, R, CLI, Library, Dataset, Web App, Julia
+        -->
+
+        <div class="software-item">
+          <div class="software-info">
+            <div class="software-name">tool-name</div>
+            <div class="software-desc">
+              One or two sentence description of what this tool does and who it is for.
+              Focus on the problem it solves.
+            </div>
+            <div class="software-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Library</span>
+              <span class="tag">CLI</span>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; flex-shrink:0; min-width:100px; align-items:flex-end;">
+            <a href="#" class="btn btn-outline" style="font-size:0.8rem; padding:7px 16px;">GitHub →</a>
+            <a href="#" style="font-size:0.8rem; color:var(--muted);">Docs</a>
+            <a href="#" style="font-size:0.8rem; color:var(--muted);">PyPI</a>
+          </div>
+        </div>
+
+        <div class="software-item">
+          <div class="software-info">
+            <div class="software-name">another-tool</div>
+            <div class="software-desc">
+              Description of the second tool. What does it do? What's its main use case?
+            </div>
+            <div class="software-tags">
+              <span class="tag">R</span>
+              <span class="tag">Dataset</span>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; flex-shrink:0; min-width:100px; align-items:flex-end;">
+            <a href="#" class="btn btn-outline" style="font-size:0.8rem; padding:7px 16px;">GitHub →</a>
+            <a href="#" style="font-size:0.8rem; color:var(--muted);">Paper</a>
+          </div>
+        </div>
+
+        <div class="software-item">
+          <div class="software-info">
+            <div class="software-name">third-project</div>
+            <div class="software-desc">
+              Description. You can mention version, active maintenance status, or notable users.
+            </div>
+            <div class="software-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Web App</span>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; flex-shrink:0; min-width:100px; align-items:flex-end;">
+            <a href="#" class="btn btn-outline" style="font-size:0.8rem; padding:7px 16px;">GitHub →</a>
+            <a href="#" style="font-size:0.8rem; color:var(--muted);">Live Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-note">© 2026 Alaa Lab</span>
+      <nav class="footer-links">
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="https://github.com/AlaaLab" target="_blank">Software</a>
+        <a href="news.html">News</a>
+        <a href="media.html">Media</a>
+        <a href="sponsors.html">Sponsors</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

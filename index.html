@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alaa Lab</title>
+  <meta name="description" content="We study [research topic] at [University]. Advancing [area] through [approach]." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ── Nav ───────────────────────────────────── -->
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-logo" href="index.html">Alaa Lab at UC Berkeley and UCSF</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="pages/people.html">People</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="pages/people.html">Lab Members</a></li>
+            <li><a href="pages/joining.html">Joining Us</a></li>
+          </ul>
+        </li>
+        <li><a href="pages/publications.html">Publications</a></li>
+        <li><a href="pages/news.html">News</a></li>
+        <li><a href="pages/media.html">Media</a></li>
+        <li><a href="pages/sponsors.html">Sponsors</a></li>
+        <li><a href="https://github.com/AlaaLab" target="_blank">Software</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ──────────────────────────────────── -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+
+          <div class="hero-text">
+            <img src="assets/images/logo.webp" alt="Alaa Lab" style="height:135px; width:auto; margin-bottom:20px;" />
+            <h1><span class="brush-u">Developing<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 200 22" style="position:absolute;bottom:-9px;left:-2%;width:104%;height:20px;opacity:0.25;"><path d="M0,6 C25,2 55,9 100,6 C145,3 175,8 200,5 L200,17 C175,19 145,15 100,17 C55,19 25,16 0,17 Z" fill="#b5179e" opacity="0.3"/><path d="M1,7 C8,4 15,9 24,6 C30,4 36,9 45,7 C52,5 58,9 67,7 C74,5 80,8 88,7 C95,6 102,9 111,7 C118,5 125,8 134,7 C141,5 148,8 157,7 C164,5 172,8 199,7 L199,15 C172,17 164,14 156,15 C147,17 139,14 131,15 C123,17 115,14 106,15 C97,17 88,14 79,15 C70,17 61,14 52,15 C43,17 34,14 25,15 C17,17 9,15 1,15 Z" fill="#b5179e" opacity="0.9"/><path d="M2,5.5 C22,4.5 45,6 68,5" stroke="#b5179e" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.55"/><path d="M148,4.5 C165,4 183,5.5 199,5" stroke="#b5179e" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.45"/><path d="M85,5 C100,4.5 118,5 135,4.5" stroke="#b5179e" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/><path d="M1,16.5 C18,15.5 38,17 58,16.5" stroke="#b5179e" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/><path d="M145,16 C163,15.5 182,17 199,16.5" stroke="#b5179e" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.3"/></svg></span> and <span class="brush-u">Evaluating<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 200 22" style="position:absolute;bottom:-9px;left:-2%;width:104%;height:20px;opacity:0.25;"><path d="M0,5 C25,1 55,8 100,5 C145,2 175,7 200,4 L200,16 C175,18 145,14 100,16 C55,18 25,15 0,16 Z" fill="#b5179e" opacity="0.3"/><path d="M1,6 C9,3 17,8 26,6 C33,4 40,8 49,6 C56,4 63,8 72,6 C79,4 85,7 93,6 C100,5 107,8 116,6 C123,4 130,7 139,6 C146,4 153,7 162,6 C169,4 177,7 199,6 L199,14 C177,16 169,13 161,14 C153,16 145,13 137,14 C129,16 121,13 112,14 C103,16 94,13 85,14 C76,16 67,13 58,14 C49,16 40,13 31,14 C23,16 14,14 1,14 Z" fill="#b5179e" opacity="0.9"/><path d="M2,4.5 C20,3.5 42,5 65,4" stroke="#b5179e" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.55"/><path d="M145,3.5 C163,3 182,4.5 199,4" stroke="#b5179e" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.45"/><path d="M82,4 C98,3.5 116,4 132,3.5" stroke="#b5179e" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/><path d="M1,15.5 C16,14.5 37,16 57,15.5" stroke="#b5179e" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/><path d="M143,15 C161,14.5 181,16 199,15.5" stroke="#b5179e" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.3"/></svg></span> AI<br>to Transform Healthcare</h1>
+            <p class="lead">
+              We are a joint UC Berkeley and UCSF multidisciplinary research lab <span class="text-accent">building</span> and <span class="text-accent">evaluating</span> AI for healthcare. We develop methods to bring AI into clinical practice, and benchmarks to measure its real-world impact.
+            </p>
+            <div class="hero-actions">
+              <a href="pages/publications.html" class="btn btn-primary">Our Publications</a>
+              <a href="pages/people.html" class="btn btn-outline">Meet the Team</a>
+            </div>
+            <div class="affil-logos">
+              <img src="assets/images/logos/Berkeley_logo_grey.png" alt="UC Berkeley">
+              <img src="assets/images/logos/UCSF_logo_grey.jpg" alt="UCSF">
+              <img src="assets/images/logos/CPH_logo_grey.jpg" alt="Computational Precision Health">
+              <img src="assets/images/logos/BAIR_logo_grey.png" alt="Berkeley AI Research">
+            </div>
+          </div>
+
+          <!-- ── Research focus terminal ────────────── -->
+          <div style="display:flex; flex-direction:column;">
+          <p style="font-family:'Caveat',cursive; font-size:1.4rem; color:#b5179e; margin-bottom:10px; text-align:center;">Navigate our research here!</p>
+          <div class="hero-terminal" id="heroTerminal" tabindex="0" role="listbox" aria-label="Research focus areas">
+
+            <div class="terminal-bar">
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-title">research.sh</span>
+            </div>
+            <div class="terminal-body">
+
+              <!-- Typing intro -->
+              <div class="terminal-intro" id="heroTerminalIntro">
+                <div class="terminal-question" id="heroAsciiArt"></div>
+                <div class="terminal-press-key" id="heroAsciiHint">— press any key —</div>
+              </div>
+
+              <!-- Interactive menu (shown after intro) -->
+              <div class="terminal-content" id="heroTerminalContent">
+                <div class="terminal-prompt">$ <span class="terminal-cmd">select focus research area</span><span class="terminal-cursor">▌</span></div>
+                <div class="terminal-menu" role="presentation"></div>
+                <div class="terminal-hint"></div>
+              </div>
+
+            </div>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── Featured Publications + News sidebar ──── -->
+    <section class="section">
+      <div class="container">
+        <div class="home-grid">
+
+          <!-- Featured Publications -->
+          <div>
+            <div class="home-section-header">
+              <h2>Featured Publications</h2>
+              <a href="pages/publications.html">All publications →</a>
+            </div>
+            <div class="pub-list">
+              <div class="pub-item">
+                <div class="pub-body">
+                  <img class="pub-thumb" src="assets/images/index%20image/ERReason.png" alt="" />
+                  <div>
+                    <div class="pub-title">ER-Reason: A Benchmark Dataset for LLM Clinical Reasoning in the Emergency Room</div>
+                    <div class="pub-authors"><a href="pages/people/mehandru.html" class="member-link">Nikita Mehandru</a>, <a href="pages/people/golchini.html" class="member-link">Niloufar Golchini</a>, Namrata Garg, Kathy LeSaint, Christopher Nash, Anu Ramachandran, Travis Zack, Liam McCoy, Adam Rodman, David Bamman, Melanie Molina, <a href="pages/people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+                    <div class="pub-venue">arXiv preprint · 2026</div>
+                    <div class="pub-links">
+                      <a href="https://arxiv.org/abs/2505.22919" target="_blank">Paper</a>
+                      <a href="https://github.com/AlaaLab/ER-Reason" target="_blank">Code</a>
+                      <a href="https://physionet.org/content/er-reason/1.0.0/" target="_blank">Data</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pub-item">
+                <div class="pub-body">
+                  <img class="pub-thumb" src="assets/images/index%20image/Chexthought.png" alt="" />
+                  <div>
+                    <div class="pub-title">CheXthought: A Global Multimodal Dataset of Clinical Chain-of-thought Reasoning and Visual Attention for Chest X-ray Interpretation</div>
+                    <div class="pub-authors">Sonali Sharma, Jin Long, George Shih, Sarah Eid, Christian Bluethgen, Francine L Jacobson, Emily B Tsai, <a href="pages/people/ahmed.html" class="member-link"><strong>Ahmed M Alaa</strong></a>, Curtis P Langlotz, Global Radiology Consortium</div>
+                    <div class="pub-venue">arXiv preprint · 2026</div>
+                    <div class="pub-links">
+                      <a href="https://arxiv.org/abs/2604.26288" target="_blank">Paper</a>
+                      <a href="https://huggingface.co/StanfordAIMI/CheXthought" target="_blank">Data</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pub-item">
+                <div class="pub-body">
+                  <img class="pub-thumb" src="assets/images/index%20image/Construct%20validity.png" alt="" />
+                  <div>
+                    <div class="pub-title">Position: Medical Large Language Model Benchmarks Should Prioritize Construct Validity</div>
+                    <div class="pub-authors"><a href="pages/people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Thomas Hartvigsen, <a href="pages/people/golchini.html" class="member-link">Niloufar Golchini</a>, Shiladitya Dutta, <a href="pages/people/dean.html" class="member-link">Frances Dean</a>, Inioluwa Deborah Raji, Travis Zack</div>
+                    <div class="pub-venue">ICML 2025 · Oral Presentation</div>
+                    <div class="pub-links">
+                      <a href="https://openreview.net/pdf?id=YuMEUNNpeb" target="_blank">Paper</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pub-item">
+                <div class="pub-body">
+                  <img class="pub-thumb" src="assets/images/index%20image/Agents%20in%20the%20clinic.png" alt="" />
+                  <div>
+                    <div class="pub-title">Evaluating Large Language Models as Agents in the Clinic</div>
+                    <div class="pub-authors"><a href="pages/people/mehandru.html" class="member-link">Nikita Mehandru</a>, Brenda Miao, Eduardo Rodriguez, Madhumita Sushil, Atul Butte, <a href="pages/people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a></div>
+                    <div class="pub-venue">NPJ Digital Medicine · 2024</div>
+                    <div class="pub-links">
+                      <a href="https://www.nature.com/articles/s41746-024-01083-y" target="_blank">Paper</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pub-item">
+                <div class="pub-body">
+                  <img class="pub-thumb" src="assets/images/index%20image/Faithfulness.png" alt="" />
+                  <div>
+                    <div class="pub-title">How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Models</div>
+                    <div class="pub-authors"><a href="pages/people/ahmed.html" class="member-link"><strong>Ahmed Alaa</strong></a>, Boris van Breugel, Evgeny Saveliev, Mihaela van der Schaar</div>
+                    <div class="pub-venue">ICML 2022</div>
+                    <div class="pub-links">
+                      <a href="https://proceedings.mlr.press/v162/alaa22a.html" target="_blank">Paper</a>
+                      <a href="https://github.com/vanderschaarlab/evaluating-generative-models" target="_blank">Code</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- News sidebar -->
+          <aside class="news-sidebar-wrap">
+            <div class="home-section-header">
+              <h2>Lab News</h2>
+              <a href="pages/news.html">All news →</a>
+            </div>
+            <div class="news-panel">
+              <div class="news-panel-item">
+                <span class="news-panel-date">Jun 2026</span>
+                <ul class="news-panel-text">
+                  <li>New paper in <a href="https://www.nature.com/articles/s41586-026-10674-6" target="_blank">Nature</a> by <a href="pages/people/schubert.html" class="member-link"><strong>Alex</strong></a> on ECG-based biomarkers for sudden cardiac death!</li>
+                  <li>Congratulations to <a href="pages/people/fields.html" class="member-link"><strong>Jenna Fields</strong></a> and <a href="pages/people/dean.html" class="member-link"><strong>Franny Dean</strong></a> on passing the qual exam! 🎉🎓</li>
+                  <li>Congratulations to <a href="pages/people/kaur.html" class="member-link"><strong>Jivat Kaur</strong></a> for receiving a Stellar Abstract Award at STAI-X 2026!</li>
+                  <li><a href="pages/people/dean.html" class="member-link"><strong>Franny Dean</strong></a> presents her work on AI surrogates for causal effect estimation in ASCO!</li>
+                  <li>📣 We're excited to share <strong>ER-Reason</strong>, a new dataset of 25K+ de-identified clinical notes on <a href="https://physionet.org/content/er-reason/1.0.0/" target="_blank">PhysioNet</a>. Read our <a href="https://arxiv.org/abs/2505.22919" target="_blank">paper</a>!</li>
+                </ul>
+              </div>
+              <div class="news-panel-item">
+                <span class="news-panel-date">May 2026</span>
+                <ul class="news-panel-text">
+                  <li>📣 In collaboration with Stanford University, we created <strong>CheXthought</strong>, a new dataset for training and evaluating medical VLMs! Available <a href="https://huggingface.co/StanfordAIMI" target="_blank">here</a>.</li>
+                </ul>
+              </div>
+              <div class="news-panel-item">
+                <span class="news-panel-date">Apr 2026</span>
+                <ul class="news-panel-text">
+                  <li>Our lab participated in the <a href="https://computationalhealth.berkeley.edu/ficph-landing-page/" target="_blank">Frontiers in CPH</a> conference with various talks and posters!</li>
+                  <li><a href="pages/publications.html">Two papers</a> accepted at ICML!</li>
+                  <li>Our lab is part of a team awarded a moonshot seed grant from the <a href="https://www.laude.org/" target="_blank">Laude Institute</a>! 🏆</li>
+                </ul>
+              </div>
+              <div class="news-panel-item">
+                <span class="news-panel-date">Mar 2026</span>
+                <ul class="news-panel-text">
+                  <li>We celebrated <a href="pages/people/schubert.html" class="member-link"><strong>Alex</strong></a>, <a href="pages/people/kaur.html" class="member-link"><strong>Jivat</strong></a>, <a href="pages/people/hou.html" class="member-link"><strong>William</strong></a>, and <a href="pages/people/liang.html" class="member-link"><strong>Zhongyuan</strong></a>'s advancement to candidacy! 🎉</li>
+                  <li><a href="pages/people/golchini.html" class="member-link"><strong>Nilo Golchini</strong></a> is admitted to the UC Berkeley - UCSF Joint Medical Program! Congrats to the first ever MD student in our lab!</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ────────────────────────────────── -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-note">© 2026 Alaa Lab</span>
+      <nav class="footer-links">
+        <a href="pages/people.html">People</a>
+        <a href="pages/publications.html">Publications</a>
+        <a href="https://github.com/AlaaLab" target="_blank">Software</a>
+        <a href="pages/news.html">News</a>
+        <a href="pages/media.html">Media</a>
+        <a href="pages/sponsors.html">Sponsors</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Research area modal -->
+  <div id="researchModal" class="research-modal-overlay" hidden>
+    <div class="research-modal" role="dialog" aria-modal="true">
+      <button class="research-modal-close" id="researchModalClose" aria-label="Close">×</button>
+      <div class="research-modal-tag" id="researchModalTag"></div>
+      <h3 class="research-modal-title" id="researchModalTitle"></h3>
+      <div class="research-modal-body" id="researchModalBody"></div>
+      <img src="assets/images/logo_grey.png" alt="" aria-hidden="true" class="research-modal-logo" />
+    </div>
+  </div>
+
+  <!-- Relevant papers modal (nested on top of research modal) -->
+  <div id="papersModal" class="papers-modal-overlay" hidden>
+    <div class="papers-modal" role="dialog" aria-modal="true">
+      <button class="papers-modal-close" id="papersModalClose" aria-label="Close">×</button>
+      <h3 class="papers-modal-title">Representative papers</h3>
+      <div class="papers-modal-list" id="papersModalList"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

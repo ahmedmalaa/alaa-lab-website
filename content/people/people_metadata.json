@@ -1,0 +1,154 @@
+{
+  "pi": {
+    "name": "Ahmed M. Alaa",
+    "title": "Assistant Professor, Department of X",
+    "photo": "http://assets/images/people/Ahmed_Alaa.jpeg",
+    "bio": "Short bio here.",
+    "links": {
+      "scholar": "https://scholar.google.com/citations?user=_pv1sEcAAAAJ&hl=en",
+      "Linkedin": "https://www.linkedin.com/in/ahmed-m-alaa-b1007614/",
+      "twitter": "https://x.com/_ahmedmalaa",
+      "website": "https://..."
+    }
+  },
+  "phd_students": [
+    {
+      "name": "Alexander Schubert",
+      "Type": "PhD Student (CPH)", 
+      "co-advisor": "(Joint with Ziad Obermeyer)",
+      "photo": "http://assets/images/people/Alex_Schubert.png",
+      "links": {
+      "scholar": "https://scholar.google.com/citations?hl=en&user=yV_Ws-QAAAAJ&view_op=list_works&sortby=pubdate",
+      "Linkedin": "https://www.linkedin.com/in/alexander-schubert-84172ab1",
+      "website": "https://..."
+      }
+    },
+{
+      "name": "Jivat Kaur",
+      "Type": "PhD Student (CPH)", 
+      "co-advisor": "(Joint with Michael I. Jordan)",
+      "photo": "http://assets/images/people/Jivat_Kaur.jpeg",
+      "links": {
+      "scholar": "https://scholar.google.com/citations?user=O43_7KUAAAAJ&hl=en",
+      "Linkedin": "https://www.linkedin.com/in/jivat-neet",
+      "website": "https://jivatneet.github.io/"
+      }
+    },
+{
+      "name": "Nikita Mehandru",
+      "Type": "PhD Student (Information School)", 
+      "co-advisor": "(Joint with David Bamman)",
+      "photo": "http://assets/images/people/Nikita_Mehandru.jpg",
+      "links": {
+      "scholar": "https://scholar.google.com/citations?user=X3SS0nYAAAAJ&hl=en",
+      "Linkedin": "https://www.linkedin.com/in/nikimeh/",
+      "twitter":"https://x.com/nikita_mehandru",
+      "website": "https://n-mehandru.github.io/"
+      }
+    },
+{
+      "name": "Kaihua (William) Hou",
+      "Type": "PhD Student (CPH)", 
+      "co-advisor": "(Joint with Geoff Tison)",
+      "photo": "http://assets/images/people/Kaihua_Hou.webp",
+      "links": {
+      "scholar": "https://scholar.google.com/citations?user=sjp358QAAAAJ&hl=en",
+      "Linkedin": "https://www.linkedin.com/in/kaihua-hou",
+      "twitter":"https://x.com/kaihuahou",
+      "website": "https://kaihua-hou.com/"
+      }
+    },
+{
+      "name": "Zhongyuan Liang",
+      "Type": "PhD Student (CPH)", 
+      "co-advisor": "(Joint with Irene Y. Chen)",
+      "photo": "http://assets/images/people/Zhongyuan_Liang.jpg",
+      "links": {
+      "scholar": "https://scholar.google.com/citations?user=UaK1OA4AAAAJ&hl=en",
+      "Linkedin": "https://www.linkedin.com/in/zhongyuan-leo-liang-6a495324b?original_referer=https%3A%2F%2Fwww.google.com%2F",
+      "twitter":"https://x.com/zhongyuan_liang",
+      "website": "https://zyliang2001.github.io/"
+      }
+    },
+{
+      "name": "Frances Dean",
+      "Type": "PhD Student (CPH)", 
+      "co-advisor": "(Joint with Ziad Obermeyer)",
+      "photo": "http://assets/images/people/Frances_Dean.jpeg",
+      "links": {
+      "scholar": "https://scholar.google.com/citations?user=Y04UhM4AAAAJ&hl=en",
+      "Linkedin": "https://www.linkedin.com/in/frances-dean-37316710b?original_referer=https%3A%2F%2Fwww.google.com%2F",
+      "website": "https://frances-dean.github.io/"
+      }
+    },
+{
+      "name": "Jenna Fields",
+      "Type": "PhD Student (CPH)", 
+      "photo": "http://assets/images/people/Jenna_Fields.jpeg",
+      "links": {
+      "Linkedin": "https://www.linkedin.com/in/jenna-fields-431663196?original_referer=https%3A%2F%2Fwww.google.com%2F",
+      }
+    }
+
+  ]
+}
+
+“Masters_undergrads”: [
+{
+      "name": "Niloufar Golchini",
+      "Type": "MD/MS Candidate",
+      "Affiliation": "UC Berkeley-UCSF Joint Medical Program (JMP)" 
+      "photo": "http://assets/images/people/Niloufar_Golchini.jpg",
+      "links": {
+      "scholar": "https://scholar.google.com/citations?user=OvO7sOIAAAAJ&hl=en",
+      "Linkedin": "https://www.linkedin.com/in/niloufar-golchini?original_referer=https%3A%2F%2Fwww.google.com%2F",
+      "twitter":"https://x.com/nbgolchini",
+},
+{
+      "name": "Abhijith Varma Mudunuri",
+      "Type": "BA Student",
+      "Affiliation": "UC Berkeley Data Science & Statistics" 
+      "photo": "http://assets/images/people/AVM.jpeg",
+      "links": {
+      "scholar": "https://scholar.google.com/citations?user=UEaYuM4AAAAJ&hl=en&oi=sra",
+      "Linkedin": "https://www.linkedin.com/in/a-v-m-?original_referer=https%3A%2F%2Fwww.google.com%2F",
+}
+]
+
+“alumni_undergraduate_researchers”: [
+{
+      “name”: “Yulu Gan”,
+      “Type”: “Research Intern (2023)”,
+      “next”: “CS PhD student at MIT CSAIL”,
+      “photo”: “http://assets/images/people/YuluGan.jpg”,
+      “links”: {}
+},
+{
+      “name”: “Jack Benarroch Jedlicki”,
+      “Type”: “Research Intern (2023-2024)”,
+      “next”: “CS PhD student at Harvard University”,
+      “photo”: “http://assets/images/people/Jack_Jedlicki.jpeg”,
+      “links”: {}
+}
+],
+
+“alumni_visiting_graduate_students”: [
+{
+      "name": "Marie-Laure Charpignon",
+      "Type": "Visiting PhD Student (2025)",
+      "Affiliation": "MIT (IDSS)" 
+      "photo": "http://assets/images/people/Marie_Charpignon.jpeg",
+      "links": {
+      "scholar": "https://scholar.google.com/citations?user=gzpWXPcAAAAJ&hl=en",
+      "Linkedin": "linkedin.com/in/mcharpignon/en",
+},
+{
+      "name": "Lars van der Laan",
+      "Type": "Visiting PhD Student (2024)",
+      "Affiliation": "University of Washington (Statistics)" 
+      "photo": "http://assets/images/people/Lars_van_der_Laan.jpg",
+      "links": {
+      "scholar": "https://scholar.google.com/citations?user=0bwP0i4AAAAJ&hl=en",
+      "Website": "https://larsvanderlaan.github.io/",
+}
+]

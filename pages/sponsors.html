@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sponsors — Alaa Lab</title>
+  <meta name="description" content="Funding and sponsors supporting Alaa Lab at UC Berkeley and UCSF." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .page-header { padding: 16px 0 24px; margin-bottom: 36px; }
+    .sponsors-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      padding: 8px 0 64px;
+    }
+    .sponsors-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 56px;
+      flex-wrap: wrap;
+    }
+    .sponsors-row img {
+      height: 108px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.8;
+      transition: opacity 0.15s;
+    }
+    .sponsors-row img:hover { opacity: 1; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="nav-logo" href="../index.html">Alaa Lab at UC Berkeley and UCSF</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="people.html">People</a>
+          <ul class="nav-dropdown-menu">
+            <li><a href="people.html">Lab Members</a></li>
+            <li><a href="joining.html">Joining Us</a></li>
+          </ul>
+        </li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="https://github.com/AlaaLab" target="_blank">Software</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header" style="display:flex; align-items:center; gap:40px;">
+        <img src="../assets/images/logo_finance.png" alt="Alaa Lab Sponsors" style="height:110px; width:auto; flex-shrink:0;" />
+        <div>
+          <h1 style="font-family:'Lora',Georgia,serif; font-weight:400; letter-spacing:-0.01em;">Sponsors</h1>
+          <p>We are grateful to the organizations and agencies that fund our research.</p>
+        </div>
+      </div>
+
+      <div class="sponsors-grid">
+        <div class="sponsors-row">
+          <img src="../assets/images/sponsors/NIH.png" alt="NIH" />
+          <img src="../assets/images/sponsors/NSF.png" alt="NSF" />
+          <img src="../assets/images/sponsors/Google Research.png" alt="Google Research" />
+        </div>
+        <div class="sponsors-row">
+          <img src="../assets/images/sponsors/MSR.png" alt="Microsoft Research" />
+          <img src="../assets/images/sponsors/Laude.png" alt="Laude" />
+          <img src="../assets/images/sponsors/logo_hellman_fellows_fund.png" alt="Hellman Fellows Fund" />
+        </div>
+        <div class="sponsors-row">
+          <img src="../assets/images/sponsors/Marcus.png" alt="Marcus Foundation" />
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-note">© 2026 Alaa Lab</span>
+      <nav class="footer-links">
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="https://github.com/AlaaLab" target="_blank">Software</a>
+        <a href="news.html">News</a>
+        <a href="media.html">Media</a>
+        <a href="sponsors.html">Sponsors</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
