@@ -200,13 +200,14 @@ if (heroTerminal) {
           label: 'Causal reasoning and world models',
           sub: [
             { label: 'Machine learning-based causal effect estimation', info: 'We develop models that estimate causal effects from observational clinical data when randomized trials are costly or infeasible, including methods that use AI predictions as surrogate endpoints when true outcomes are long-term or expensive to observe.', img: 'assets/images/research%20popups/AI%20causal%20effects.png', papers: [PAPERS.conformalMetaLearners, PAPERS.predictionPoweredCausal, PAPERS.causalEffectLearnedInstruments, PAPERS.hybridMetaLearners, PAPERS.aiCopilotsCausalEvidence], members: [
-              { name: 'Ahmed', img: 'assets/images/cropped_face_images_transparent/Ahmed_cropped.png', href: 'pages/people/ahmed.html' },
               { name: 'Franny', img: 'assets/images/cropped_face_images_transparent/Franny_cropped.png', href: 'pages/people/dean.html' },
               { name: 'Zhongyuan', img: 'assets/images/cropped_face_images_transparent/Zhongyuan_cropped.png', href: 'pages/people/liang.html' },
+              { name: 'Jenna', img: 'assets/images/cropped_face_images_transparent/Jenna_cropped.png', href: 'pages/people/fields.html' },
             ]},
             { label: 'Medical world models and digital twins', info: 'We build patient-level digital twins and world models of clinical environments to simulate individual patient trajectories and support counterfactual reasoning for personalized decision-making.', img: 'assets/images/research%20popups/World%20Models%20and%20Digital%20Twins.png', papers: [PAPERS.medReal2Sim, PAPERS.stateSpaceModeling], members: [
               { name: 'Franny', img: 'assets/images/cropped_face_images_transparent/Franny_cropped.png', href: 'pages/people/dean.html' },
               { name: 'Nikita', img: 'assets/images/cropped_face_images_transparent/Nikita_cropped.png', href: 'pages/people/mehandru.html' },
+              { name: 'Jenna', img: 'assets/images/cropped_face_images_transparent/Jenna_cropped.png', href: 'pages/people/fields.html' },
             ]},
           ]
         }
