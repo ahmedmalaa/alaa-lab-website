@@ -747,33 +747,6 @@ if (heroTerminal) {
   }, 45);
 }
 
-// ── News sidebar: auto-populate from news.html ──
-const newsPanel = document.querySelector('.news-panel');
-if (newsPanel) {
-  fetch('pages/news.html')
-    .then(r => r.text())
-    .then(html => {
-      const doc = new DOMParser().parseFromString(html, 'text/html');
-      const items = Array.from(doc.querySelectorAll('.news-item'));
-      const blocks = items.slice(0, 4).map(item => {
-        const date = item.querySelector('.news-date')?.textContent.trim() || '';
-        const lis = Array.from(item.querySelectorAll('ul.news-text li')).map(li => {
-          li.querySelectorAll('a[href]').forEach(a => {
-            const href = a.getAttribute('href');
-            if (href && !href.startsWith('http') && !href.startsWith('#')) {
-              a.setAttribute('href', 'pages/' + href);
-            }
-          });
-          return `<li>${li.innerHTML}</li>`;
-        }).join('');
-        if (!lis) return '';
-        return `<div class="news-panel-item"><span class="news-panel-date">${date}</span><ul class="news-panel-text">${lis}</ul></div>`;
-      }).filter(Boolean).join('');
-      if (blocks) newsPanel.innerHTML = blocks;
-    })
-    .catch(() => {});
-}
-
 // ── Member page: paginate publications list ─────
 const memberPubList = document.getElementById('member-pub-list');
 if (memberPubList) {
