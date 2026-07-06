@@ -192,7 +192,6 @@ if (heroTerminal) {
             ]},
             { label: 'Test-time clinical reasoning', info: 'We study test-time methods that let frontier models reason more carefully about a patient case at inference. Because these methods are applied at inference time, they are compatible with black-box proprietary models without retraining or access to model weights.', img: 'assets/images/research%20popups/Test%20time%20hinting.png', papers: [PAPERS.testTimeHinting], members: [
               { name: 'William', img: 'assets/images/cropped_face_images_transparent/William_cropped.png', href: 'pages/people/william.html' },
-              { name: 'AVM', img: 'assets/images/cropped_face_images_transparent/AVM_cropped.png', href: 'pages/people/mudunuri.html' },
             ]},
           ]
         },
@@ -240,6 +239,7 @@ if (heroTerminal) {
             { label: 'Construct validity and benchmark item design', info: 'Drawing on our reader studies and human evaluations, we design benchmark items that discriminate strong and weak models on real-world tasks, with the goal of improving the construct validity of benchmarks vendors and researchers use for model eval.', img: 'assets/images/research%20popups/Construct%20validity.png', papers: [PAPERS.constructValidityPosition, PAPERS.aligningBenchmarksPairwisePreferences, PAPERS.inflexibleReasoningLimitations], members: [
               { name: 'Ahmed', img: 'assets/images/cropped_face_images_transparent/Ahmed_cropped.png', href: 'pages/people/ahmed.html' },
               { name: 'Nilo', img: 'assets/images/cropped_face_images_transparent/Nilo_cropped.png', href: 'pages/people/golchini.html' },
+              { name: 'Nikita', img: 'assets/images/cropped_face_images_transparent/Nikita_cropped.png', href: 'pages/people/mehandru.html' },
             ]},
             { label: 'Validity of LLM as judge', info: 'One way to evaluate LLMs in unverifiable tasks in clinical contexts is to use other LLMs as automated judges. We study the statistical validity of these methods and the optimal approaches for combining costly human evals with scalable AI-based ones.', img: 'assets/images/research%20popups/LLM%20Judge.png', papers: [PAPERS.medEvalArena], members: [
               { name: 'Ahmed', img: 'assets/images/cropped_face_images_transparent/Ahmed_cropped.png', href: 'pages/people/ahmed.html' },
